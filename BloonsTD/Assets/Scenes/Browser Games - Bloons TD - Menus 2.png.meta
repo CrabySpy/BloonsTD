@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f44795f1c5007ac49a42ec85f282d5ee
+guid: a463b24ff6d69de459cd2c3155729c25
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2721857792588095681
-    second: Browser Games - Bloons TD - Tower Selected_0
+      213: 2701518683851368415
+    second: Browser Games - Bloons TD - Menus_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Browser Games - Bloons TD - Tower Selected_0
+      name: Browser Games - Bloons TD - Menus_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 101
-        height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4
+        y: 630
+        width: 413
+        height: 91
+      alignment: 9
+      pivot: {x: 0.13503666, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3f58a732c40a3ad0800000000000000
-      internalID: -2721857792588095681
+      spriteID: fd7aa010ee8bd7520800000000000000
+      internalID: 2701518683851368415
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a128861f4594ea84299bb3788fbddce0
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Browser Games - Bloons TD - Tower Selected_0: -2721857792588095681
+      Browser Games - Bloons TD - Menus_0: 2701518683851368415
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
