@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c5c8506ea98e3a04490a299d8610a9a8
+guid: 959b5445d53185748a6212830a846033
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -116,12 +116,12 @@ TextureImporter:
       name: Bloons td menu_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1327
-        height: 1233
+        x: 9
+        y: 728
+        width: 623
+        height: 471
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6d9d45e8075a97141bca8679c85e63ae
     internalID: 0
     vertices: []
     indices: 
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bloons td menu_0: -3702288994220958026
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
