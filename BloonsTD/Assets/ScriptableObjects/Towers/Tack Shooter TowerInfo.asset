@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e8173c7413a5004f8f71dac1a35f4ef, type: 3}
-  m_Name: Super Monkey TowerInfo 1
+  m_Name: Tack Shooter TowerInfo
   m_EditorClassIdentifier: 
-  _name: Super Monkey
-  _cost: 4000
-  _description: Super monkey shoots a continuous stream of darts and can mow down
-    even the fastest and most stubborn bloons.
+  _name: Tack Shooter
+  _cost: 400
+  _description: Shoots volley of tacks in 8 directions. Can upgrade its shoot speed
+    and its range.
