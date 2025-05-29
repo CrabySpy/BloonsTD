@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Dart Monkey TowerInfo
   m_EditorClassIdentifier: 
   _name: Dart Monkey
-  _cost: 0
-  _description: 
+  _cost: 250
+  _description: Shoots a single dart. Can upgrade to piercing darts and long range
+    darts.

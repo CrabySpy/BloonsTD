@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e8173c7413a5004f8f71dac1a35f4ef, type: 3}
-  m_Name: Super Monkey TowerInfo 1
+  m_Name: Bomb Tower TowerInfo
   m_EditorClassIdentifier: 
-  _name: Super Monkey
-  _cost: 4000
-  _description: Super monkey shoots a continuous stream of darts and can mow down
-    even the fastest and most stubborn bloons.
+  _name: Bomb Tower
+  _cost: 900
+  _description: Bomb Towers launch bombs that explode on impact. They can be upgraded
+    to Bigger Bombs & Long Range Bombs. Bomb Towers are ineffective against Black
+    Bloons. However, a bomb tower works well when near an ice tower.
