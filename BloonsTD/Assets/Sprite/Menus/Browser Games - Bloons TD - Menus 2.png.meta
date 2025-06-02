@@ -200,6 +200,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Browser Games - Bloons TD - Menus 2_3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 477
+        width: 230
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97240ada3667c0445a07509570c7a03e
+      internalID: -428067032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -217,6 +239,7 @@ TextureImporter:
       Browser Games - Bloons TD - Menus 2_0: 171486833
       Browser Games - Bloons TD - Menus 2_1: 1359671252
       Browser Games - Bloons TD - Menus 2_2: -932708850
+      Browser Games - Bloons TD - Menus 2_3: -428067032
       Browser Games - Bloons TD - Menus_0: 2701518683851368415
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
