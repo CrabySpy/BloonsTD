@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class NewGameButton : MonoBehaviour
 {
-    public string MainMenu;
     private BoxCollider2D boxColliderMM;
 
     void Start(){

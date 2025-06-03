@@ -2,29 +2,24 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenuScript : MonoBehaviour
+public class SettingsMenuButtons : MonoBehaviour
 {
-    public GameObject BacktoGame;
-    private BoxCollider2D backToGameCollider;
-    public GameObject BacktoMainMenu;
-    private BoxCollider2D backToMainMenuCollider;
+    public GameObject Return;
+    private BoxCollider2D returnCollider;
 
-    public GameObject MuteMusic;
+    public GameObject MuteMusicButton;
     private BoxCollider2D muteMusicCollider;
     public GameObject MuteMusicHider;
 
-    public GameObject MuteSound;
+    public GameObject MuteSoundButton;
     private BoxCollider2D muteSoundCollider;
     public GameObject MuteSoundHider;
-
-    public PauseMenuButton pauseMenuButton;
-
     void Start()
     {
-        backToGameCollider = BacktoGame.GetComponent<BoxCollider2D>();
-        backToMainMenuCollider = BacktoMainMenu.GetComponent<BoxCollider2D>();
-        muteMusicCollider = MuteMusic.GetComponent<BoxCollider2D>();
-        muteSoundCollider = MuteSound.GetComponent<BoxCollider2D>();
+        returnCollider = Return.GetComponent<BoxCollider2D>();
+        muteMusicCollider = MuteMusicButton.GetComponent<BoxCollider2D>();
+        muteSoundCollider = MuteSoundButton.GetComponent<BoxCollider2D>();
+
         if (Audio.MuteMusic == true)
         {
             MuteMusicHider.SetActive(false);
@@ -38,34 +33,25 @@ public class PauseMenuScript : MonoBehaviour
 
     void Update()
     {
-
-        //Back to Game Button
+        //Return button
         if (Input.GetMouseButtonDown(0))
         {
+            //Stack overflow
             Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            if (backToGameCollider == Physics2D.OverlapPoint(worldPoint))
-            {
-                pauseMenuButton.turnedOn = false;
-                gameObject.SetActive(false);
-            }
-        }
-
-        //Back to Main Menu Button
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            if (backToMainMenuCollider == Physics2D.OverlapPoint(worldPoint))
+            if (returnCollider == Physics2D.OverlapPoint(worldPoint))
             {
                 SceneManager.LoadScene("MainMenu");
             }
         }
 
-        //Mute Music Button
+        //Save button
+
+        //Hotkeys button
+
+        //Mute music button
         if (Input.GetMouseButtonDown(0))
         {
-            //Stack overflow
             Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             if (muteMusicCollider == Physics2D.OverlapPoint(worldPoint) && Audio.MuteMusic == false)
@@ -81,7 +67,7 @@ public class PauseMenuScript : MonoBehaviour
             }
         }
 
-        //Mute Sound Button
+        //Mute sounds button
         if (Input.GetMouseButtonDown(0))
         {
             Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);

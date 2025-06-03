@@ -1,15 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuScript : MonoBehaviour
+public class SettingsButton : MonoBehaviour
 {
-    public string MainMenu;
     private BoxCollider2D boxCollider;
-
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
-        
     }
 
     void Update()
@@ -20,7 +17,7 @@ public class MenuScript : MonoBehaviour
 
             if (boxCollider == Physics2D.OverlapPoint(worldPoint))
         {
-                SceneManager.LoadScene(MainMenu);
+                SceneManager.LoadScene("Settings");
             }
         }
     }
