@@ -4108,7 +4108,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 --- !u!1 &2132228858
 =======
@@ -4328,8 +4327,6 @@ CanvasRenderer:
   m_GameObject: {fileID: 2106544212}
   m_CullTransparentMesh: 1
 >>>>>>> Stashed changes
-=======
->>>>>>> parent of 60f8fe1 (Added Tack shooter to the game)
 --- !u!1 &2141357552
 GameObject:
   m_ObjectHideFlags: 0
@@ -4506,12 +4503,9 @@ SceneRoots:
   - {fileID: 1181118425}
   - {fileID: 4302007665177293658}
   - {fileID: 2084771858}
-<<<<<<< HEAD
 <<<<<<< Updated upstream
   - {fileID: 2132228860}
 =======
   - {fileID: 688410796}
   - {fileID: 1950568727}
 >>>>>>> Stashed changes
-=======
->>>>>>> parent of 60f8fe1 (Added Tack shooter to the game)
