@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fdd1c936b4f5f8d4e9160774e57196df
+guid: 6f2a09fc7707df848b3de9a064409e32
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1572853254697706958
-    second: Browser Games - Bloons TD - Ice Tower_0
+      213: -3891136692897071254
+    second: Tack_Shooter-removebg-preview_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,45 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Browser Games - Bloons TD - Ice Tower_0
+      name: Tack_Shooter-removebg-preview_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 71
-        height: 210
+        width: 96
+        height: 97
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec5e21aa3b5e3d510800000000000000
-      internalID: 1572853254697706958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ice Monkey_0
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 119
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 1, y: 0, z: 0, w: 1}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec9665557d9795b4e9b3400316032de8
-      internalID: 2106819702
+      spriteID: a6fb16f3bc7eff9c0800000000000000
+      internalID: -3891136692897071254
       vertices: []
       indices: 
       edges: []
@@ -160,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7194b32a476fdef41b35963dd7cca1cc
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -170,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Browser Games - Bloons TD - Ice Tower_0: 1572853254697706958
-      Ice Monkey_0: 2106819702
+      Tack_Shooter-removebg-preview_0: -3891136692897071254
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
