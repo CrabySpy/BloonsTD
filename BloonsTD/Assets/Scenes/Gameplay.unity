@@ -525,7 +525,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1517281447
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 896590178, guid: 144ead77692aba74eaf6c8da986555f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -634,15 +634,15 @@ MonoBehaviour:
   - {fileID: 546105496}
   - {fileID: 1720992032}
   - {fileID: 1711251180}
-  - {fileID: 327003794}
+  - {fileID: 0}
   - {fileID: 1209436754}
-  - {fileID: 676991856}
-  - {fileID: 179637831}
-  - {fileID: 254777781}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 7084038}
-  - {fileID: 666935727}
-  - {fileID: 441706895}
-  - {fileID: 837277026}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 1140629222}
 --- !u!4 &428710425
 Transform:
@@ -662,15 +662,8 @@ Transform:
   - {fileID: 546105496}
   - {fileID: 1720992032}
   - {fileID: 1711251180}
-  - {fileID: 327003794}
   - {fileID: 1209436754}
-  - {fileID: 676991856}
-  - {fileID: 179637831}
-  - {fileID: 254777781}
   - {fileID: 7084038}
-  - {fileID: 666935727}
-  - {fileID: 441706895}
-  - {fileID: 837277026}
   - {fileID: 1140629222}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1800,7 +1793,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1517281447
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 435189953, guid: 2ac33eff2f4e04c44995ea1ad96276f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2420,7 +2413,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1517281447
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -3932398013404812543, guid: e89854dc544434d49944c7c41e4305dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3545,7 +3538,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1517281447
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2106819702, guid: fdd1c936b4f5f8d4e9160774e57196df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
