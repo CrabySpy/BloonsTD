@@ -12,9 +12,17 @@ public class ShopScript : MonoBehaviour
     public GameObject InfoBox;
     public GameObject DartMonkeyIcon;
     private BoxCollider2D dartMonkeyCollider;
+    public GameObject TackShooterIcon;
+    private BoxCollider2D tackShooterCollider;
+    public GameObject IceMonkeyIcon;
+    private BoxCollider2D iceMonkeyCollider;
+    public GameObject BombTowerIcon;
+    private BoxCollider2D bombTowerCollider;
+    public GameObject SuperMonkeyIcon;
+    private BoxCollider2D superMonkeyCollider;
 
     public TowerInfo[] TowerInfo;
-    public TowerInfo SelectedTower;
+    private TowerInfo SelectedTower;
     public TMP_Text Tower;
     public TMP_Text Cost;
     public TMP_Text Speed;
@@ -25,6 +33,10 @@ public class ShopScript : MonoBehaviour
         gameManager = FindFirstObjectByType<GameManager>();
         UpdateText();
         dartMonkeyCollider = DartMonkeyIcon.GetComponent<BoxCollider2D>();
+        tackShooterCollider = TackShooterIcon.GetComponent<BoxCollider2D>();
+        iceMonkeyCollider = IceMonkeyIcon.GetComponent<BoxCollider2D>();
+        bombTowerCollider = BombTowerIcon.GetComponent<BoxCollider2D>();
+        superMonkeyCollider = SuperMonkeyIcon.GetComponent<BoxCollider2D>();
     }
 
     void UpdateText()
@@ -39,7 +51,27 @@ public class ShopScript : MonoBehaviour
         Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (dartMonkeyCollider == Physics2D.OverlapPoint(worldPoint))
         {
-            InfoBoxMethod("Dart Monkey");
+            InfoBoxMethod(0);
+            InfoBox.SetActive(true);
+        }
+        else if (tackShooterCollider == Physics2D.OverlapPoint(worldPoint))
+        {
+            InfoBoxMethod(3);
+            InfoBox.SetActive(true);
+        }
+        else if (iceMonkeyCollider == Physics2D.OverlapPoint(worldPoint))
+        {
+            InfoBoxMethod(4);
+            InfoBox.SetActive(true);
+        }
+        else if (bombTowerCollider == Physics2D.OverlapPoint(worldPoint))
+        {
+            InfoBoxMethod(1);
+            InfoBox.SetActive(true);
+        }
+        else if (superMonkeyCollider == Physics2D.OverlapPoint(worldPoint))
+        {
+            InfoBoxMethod(2);
             InfoBox.SetActive(true);
         }
         else
@@ -48,16 +80,12 @@ public class ShopScript : MonoBehaviour
         }
     }
 
-    void InfoBoxMethod(string tower)
+    void InfoBoxMethod(int index)
     {
-        if (tower == "Dart Monkey")
-        {
-            SelectedTower = TowerInfo[0];
-
+            SelectedTower = TowerInfo[index];
             Tower.text = SelectedTower.Name;
             Cost.text = SelectedTower.Cost.ToString();
             Speed.text = SelectedTower.Speed;
             Desc.text = SelectedTower.Description;
-        }
     }
 }

@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e8173c7413a5004f8f71dac1a35f4ef, type: 3}
   m_Name: Bomb Tower TowerInfo
   m_EditorClassIdentifier: 
-  _name: Bomb Tower
-  _cost: 900
-  _description: Bomb Towers launch bombs that explode on impact. They can be upgraded
-    to Bigger Bombs & Long Range Bombs. Bomb Towers are ineffective against Black
-    Bloons. However, a bomb tower works well when near an ice tower.
+  Name: Bomb Tower
+  Cost: 900
+  _speed: 0
+  Speed: Medium
+  _range: 0
+  Description: Launches a bomb that explodes on impact. Can upgrade to bigger bombs
+    and longer range.

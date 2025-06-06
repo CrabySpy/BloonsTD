@@ -641,7 +641,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
@@ -1395,7 +1395,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 906188563}
+  - {fileID: 1927982018}
   m_Father: {fileID: 865469523}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1651,8 +1651,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 215.96, y: -91.36}
-  m_SizeDelta: {x: 132.48, y: 76.72}
+  m_AnchoredPosition: {x: 215.96, y: -89.65}
+  m_SizeDelta: {x: 132.48, y: 84.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &668140474
 MonoBehaviour:
@@ -1701,11 +1701,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
+  m_fontSize: 23.15
   m_fontSizeBase: 12
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
@@ -2224,7 +2224,7 @@ GameObject:
   - component: {fileID: 906188565}
   - component: {fileID: 906188564}
   m_Layer: 5
-  m_Name: CostVar
+  m_Name: SpeedVar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2242,11 +2242,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 531395296}
+  m_Father: {fileID: 2016246456}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75.79002, y: -24.740004}
+  m_AnchoredPosition: {x: 68, y: 2.7999954}
   m_SizeDelta: {x: 67.42, y: 25.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &906188564
@@ -2300,7 +2300,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -5070,6 +5070,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1914643091}
   - component: {fileID: 1914643092}
+  - component: {fileID: 1914643093}
   m_Layer: 0
   m_Name: Tack Shooter Icon
   m_TagString: Untagged
@@ -5147,6 +5148,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1914643093
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914643090}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.68, y: 0.69}
+    newSize: {x: 0.68, y: 0.69}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.68, y: 0.69}
+  m_EdgeRadius: 0
 --- !u!1 &1927982017
 GameObject:
   m_ObjectHideFlags: 0
@@ -5159,7 +5206,7 @@ GameObject:
   - component: {fileID: 1927982020}
   - component: {fileID: 1927982019}
   m_Layer: 5
-  m_Name: SpeedVar
+  m_Name: CostVar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5177,11 +5224,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2016246456}
+  m_Father: {fileID: 531395296}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 55.8, y: 27.5}
+  m_AnchoredPosition: {x: 63.58998, y: -0.03999901}
   m_SizeDelta: {x: 67.42, y: 25.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1927982019
@@ -5244,7 +5291,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
-  m_lineSpacingMax: 0
+  m_lineSpacingMax: -0.74
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
@@ -5375,15 +5422,19 @@ MonoBehaviour:
   Lives: {fileID: 1318245642}
   InfoBox: {fileID: 1944023282}
   DartMonkeyIcon: {fileID: 236741263}
+  TackShooterIcon: {fileID: 1914643090}
+  IceMonkeyIcon: {fileID: 1878750285}
+  BombTowerIcon: {fileID: 1239551033}
+  SuperMonkeyIcon: {fileID: 919439800}
   TowerInfo:
   - {fileID: 11400000, guid: a499dfa2fa1b69a4eb4b35174a51d146, type: 2}
   - {fileID: 11400000, guid: 0f42d8915299eb841b2374ac4489a3ae, type: 2}
   - {fileID: 11400000, guid: bda0d333444278b4e9c11276675cf92d, type: 2}
   - {fileID: 11400000, guid: 1f73e35a8f6de3f43a8a0b9eff09d0fc, type: 2}
-  SelectedTower: {fileID: 0}
+  - {fileID: 11400000, guid: 885c6d9b37677fe4ba13959905d16588, type: 2}
   Tower: {fileID: 349420373}
-  Cost: {fileID: 906188564}
-  Speed: {fileID: 1927982019}
+  Cost: {fileID: 1927982019}
+  Speed: {fileID: 906188564}
   Desc: {fileID: 668140474}
 --- !u!1 &2016246455
 GameObject:
@@ -5415,7 +5466,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1927982018}
+  - {fileID: 906188563}
   m_Father: {fileID: 865469523}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

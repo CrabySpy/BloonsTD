@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e8173c7413a5004f8f71dac1a35f4ef, type: 3}
   m_Name: Super Monkey TowerInfo 1
   m_EditorClassIdentifier: 
-  _name: Super Monkey
-  _cost: 4000
-  _description: Super monkey shoots a continuous stream of darts and can mow down
+  Name: Super Monkey
+  Cost: 4000
+  _speed: 0
+  Speed: Hypersonic
+  _range: 0
+  Description: Super monkey shoots a continuous stream of darts and can mow down
     even the fastest and most stubborn bloons.

@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e8173c7413a5004f8f71dac1a35f4ef, type: 3}
-  m_Name: Tack Shooter TowerInfo
+  m_Name: Ice Monkey TowerInfo
   m_EditorClassIdentifier: 
-  Name: Tack Shooter
-  Cost: 400
+  Name: Ice Monkey
+  Cost: 850
   _speed: 0
-  Speed: Medium
+  Speed: Slow
   _range: 0
-  Description: Shoots volley of tacks in 8 directions. Can upgrade its shoot speed
-    and its range.
+  Description: Freezes nearby bloons. Frozen bloons are immune to darts and tacks,
+    but bombs will destroy them. Can upgrade to increased freeze time, and larger
+    freeze radius.
