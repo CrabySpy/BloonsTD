@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.WSA;
+using Unity.Multiplayer.Center.Common;
 
 public class ShopScript : MonoBehaviour
 {
@@ -10,6 +12,13 @@ public class ShopScript : MonoBehaviour
     public GameObject InfoBox;
     public GameObject DartMonkeyIcon;
     private BoxCollider2D dartMonkeyCollider;
+
+    public TowerInfo[] TowerInfo;
+    public TowerInfo SelectedTower;
+    public TMP_Text Tower;
+    public TMP_Text Cost;
+    public TMP_Text Speed;
+    public TMP_Text Desc;
 
     void Start()
     {
@@ -30,11 +39,25 @@ public class ShopScript : MonoBehaviour
         Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (dartMonkeyCollider == Physics2D.OverlapPoint(worldPoint))
         {
+            InfoBoxMethod("Dart Monkey");
             InfoBox.SetActive(true);
         }
         else
         {
             InfoBox.SetActive(false);
+        }
+    }
+
+    void InfoBoxMethod(string tower)
+    {
+        if (tower == "Dart Monkey")
+        {
+            SelectedTower = TowerInfo[0];
+
+            Tower.text = SelectedTower.Name;
+            Cost.text = SelectedTower.Cost.ToString();
+            Speed.text = SelectedTower.Speed;
+            Desc.text = SelectedTower.Description;
         }
     }
 }

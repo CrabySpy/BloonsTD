@@ -5375,6 +5375,16 @@ MonoBehaviour:
   Lives: {fileID: 1318245642}
   InfoBox: {fileID: 1944023282}
   DartMonkeyIcon: {fileID: 236741263}
+  TowerInfo:
+  - {fileID: 11400000, guid: a499dfa2fa1b69a4eb4b35174a51d146, type: 2}
+  - {fileID: 11400000, guid: 0f42d8915299eb841b2374ac4489a3ae, type: 2}
+  - {fileID: 11400000, guid: bda0d333444278b4e9c11276675cf92d, type: 2}
+  - {fileID: 11400000, guid: 1f73e35a8f6de3f43a8a0b9eff09d0fc, type: 2}
+  SelectedTower: {fileID: 0}
+  Tower: {fileID: 349420373}
+  Cost: {fileID: 906188564}
+  Speed: {fileID: 1927982019}
+  Desc: {fileID: 668140474}
 --- !u!1 &2016246455
 GameObject:
   m_ObjectHideFlags: 0

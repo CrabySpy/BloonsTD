@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e8173c7413a5004f8f71dac1a35f4ef, type: 3}
   m_Name: Dart Monkey TowerInfo
   m_EditorClassIdentifier: 
-  _name: Dart Monkey
-  _cost: 250
-  _description: Shoots a single dart. Can upgrade to piercing darts and long range
+  Name: Dart Monkey
+  Cost: 250
+  _speed: 0
+  Speed: Fast
+  _range: 0
+  Description: Shoots a single dart. Can upgrade to piercing darts and long range
     darts.
