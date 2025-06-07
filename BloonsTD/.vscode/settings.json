@@ -56,5 +56,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "BloonsTD.sln"
+    "dotnet.defaultSolution": "BloonsTD.sln",
+    "cSpell.words": [
+        "nums"
+    ]
 }
