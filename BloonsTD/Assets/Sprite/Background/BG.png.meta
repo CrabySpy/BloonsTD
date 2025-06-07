@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fdd1c936b4f5f8d4e9160774e57196df
+guid: 662aefcbdfe10064aba05231b7abe769
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1572853254697706958
-    second: Browser Games - Bloons TD - Ice Tower_0
+      213: -6695950386315148514
+    second: BG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,106 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ice Monkey Body
+      name: BG_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 59
-        width: 27
-        height: 27
+        x: 0
+        y: 1
+        width: 558
+        height: 446
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec5e21aa3b5e3d510800000000000000
-      internalID: 1572853254697706958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ice Monkey Icon
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 119
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 1, y: 0, z: 0, w: 1}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec9665557d9795b4e9b3400316032de8
-      internalID: 2106819702
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ice Monkey Bobdy
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 58
-        width: 31
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0cb8a907d74e3ae4eac068806de7a79d
-      internalID: -1844729315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ice Monkey Particle
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 4
-        width: 21
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5d45b8844d84e64283aa6bfc726a93b
-      internalID: -318651159
+      spriteID: e13cb0ea9943313a0800000000000000
+      internalID: -6695950386315148514
       vertices: []
       indices: 
       edges: []
@@ -204,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7194b32a476fdef41b35963dd7cca1cc
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -213,11 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Ice Monkey Bobdy: -1844729315
-      Ice Monkey Body: 1572853254697706958
-      Ice Monkey Icon: 2106819702
-      Ice Monkey Particle: -318651159
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
