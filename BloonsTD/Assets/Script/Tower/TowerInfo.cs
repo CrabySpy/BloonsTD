@@ -6,9 +6,8 @@ public class TowerInfo : ScriptableObject
 {
     [SerializeField] public string Name;
     [SerializeField] public int Cost;
-    [SerializeField] private float _speed;
     [SerializeField] public string Speed;
-    [SerializeField] private float _range;
+    [SerializeField] public float Range;
 
     //public List<UpgradeInfo> Upgrades;
     // [SerializeField] private Tower

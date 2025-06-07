@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Ice Monkey
   Cost: 850
-  _speed: 0
   Speed: Slow
-  _range: 0
+  Range: 1.2
   Description: Freezes nearby bloons. Frozen bloons are immune to darts and tacks,
     but bombs will destroy them. Can upgrade to increased freeze time, and larger
     freeze radius.

@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Tack Shooter
   Cost: 400
-  _speed: 0
   Speed: Medium
-  _range: 0
+  Range: 1
   Description: Shoots volley of tacks in 8 directions. Can upgrade its shoot speed
     and its range.
