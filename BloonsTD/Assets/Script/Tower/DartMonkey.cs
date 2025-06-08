@@ -6,13 +6,6 @@ public class DartMonkey : Tower
     public GameObject dartPrefab;
     [SerializeField] private float projectileSpeed = 10f;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            Attack();
-        }
-    }
 
     public override void Attack()
     {

@@ -6,14 +6,9 @@ public class TackShooter : Tower
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float projectileSpeed = 10f;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Attack();
-        }
-    }
+    protected override void RotateTowardsMouse() {}
 
+    
     public override void Attack()
     {
         if (projectilePrefab == null || firePoint == null)

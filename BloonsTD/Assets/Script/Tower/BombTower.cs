@@ -5,13 +5,7 @@ public class BombTower : Tower
     public GameObject ProjectilePrefab;
     [SerializeField] private float projectileSpeed = 10f;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            Attack();
-        }
-    }
+    
 
     public override void Attack()
     {

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Super Monkey
   Cost: 4000
-  Speed: Hypersonic
+  Speed: 3
   Range: 4
   Description: Super monkey shoots a continuous stream of darts and can mow down
     even the fastest and most stubborn bloons.

@@ -5,13 +5,7 @@ public class SuperMonkey : Tower
     public GameObject ProjectilePrefab;
     [SerializeField] private float projectileSpeed = 10f;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Attack();
-        }
-    }
+    
 
     public override void Attack()
     {

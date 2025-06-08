@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Dart Monkey
   Cost: 250
-  Speed: Fast
+  Speed: 2
   Range: 2.5
   Description: Shoots a single dart. Can upgrade to piercing darts and long range
     darts.

@@ -160,7 +160,7 @@ public class ShopScript : MonoBehaviour
         SelectedTower = TowerInfo[index];
         Tower.text = SelectedTower.Name;
         Cost.text = SelectedTower.Cost.ToString();
-        Speed.text = SelectedTower.Speed;
+        Speed.text = SelectedTower.SpeedString;
         Desc.text = SelectedTower.Description;
     }
 
