@@ -3,35 +3,33 @@ using UnityEditor;
 
 public class DartMonkey : Tower
 {
-    public GameObject projectilePrefab;
-    public int numberOfProjectiles = 8;
-    public float projectileSpeed = 5f;
+    public GameObject dartPrefab;
+    [SerializeField] private float projectileSpeed = 10f;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             Attack();
         }
     }
 
-
     public override void Attack()
     {
-        float angleStep = 360f / numberOfProjectiles;
-
-        for (int i = 0; i < numberOfProjectiles; i++)
+        if (dartPrefab == null || firePoint == null)
         {
-            float angle = i * angleStep * Mathf.Deg2Rad;
-            Vector3 direction = new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)).normalized;
+            Debug.LogWarning("Missing dartPrefab or firePoint on " + gameObject.name);
+            return;
+        }
 
-            GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        GameObject dart = Instantiate(dartPrefab, firePoint.position, firePoint.rotation * Quaternion.Euler(0, 0, 270f));
 
-            Rigidbody rb = projectile.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.linearVelocity = direction * projectileSpeed;
-            }
+        
+        Rigidbody2D rb = dart.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = firePoint.right * projectileSpeed; // Right assumes your dart faces right
         }
     }
 }
+

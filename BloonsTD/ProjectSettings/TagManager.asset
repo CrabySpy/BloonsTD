@@ -44,6 +44,9 @@ TagManager:
   - name: Background
     uniqueID: 2440498105
     locked: 0
+  - name: Projectile
+    uniqueID: 3040083085
+    locked: 0
   - name: Towers
     uniqueID: 1177709583
     locked: 0
