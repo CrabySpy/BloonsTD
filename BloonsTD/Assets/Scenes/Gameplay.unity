@@ -566,7 +566,7 @@ Transform:
   m_GameObject: {fileID: 75927521}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.65, y: 2.14, z: 0}
+  m_LocalPosition: {x: -5.36, y: -0.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -609,6 +609,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerInfo: {fileID: 11400000, guid: a499dfa2fa1b69a4eb4b35174a51d146, type: 2}
   rotationalPoint: {fileID: 58548036}
+  bloonsMask:
+    serializedVersion: 2
+    m_Bits: 0
   projectilePrefab: {fileID: 757565116}
   numberOfProjectiles: 1
   projectileSpeed: 5
@@ -774,6 +777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 107220907}
   - component: {fileID: 107220908}
+  - component: {fileID: 107220909}
   m_Layer: 0
   m_Name: Bomb Tower Base
   m_TagString: Untagged
@@ -851,6 +855,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &107220909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107220906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9424162d975117d4aaf2cb1aad4e8e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerInfo: {fileID: 11400000, guid: 0f42d8915299eb841b2374ac4489a3ae, type: 2}
+  rotationalPoint: {fileID: 437059776}
+  bloonsMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &135380404
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,8 +2288,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531275489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 90.06514}
+  m_LocalScale: {x: 0.02173913, y: 0.02173913, z: 0.02173913}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 27620977}
@@ -2276,9 +2297,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.24007022, y: -0.31860483}
+  m_SizeDelta: {x: 613, y: 460}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &531275491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2318,7 +2339,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &531275493
 Canvas:
   m_ObjectHideFlags: 0
@@ -2328,7 +2349,7 @@ Canvas:
   m_GameObject: {fileID: 531275489}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 2
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -3218,7 +3239,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &706791014
 Canvas:
   m_ObjectHideFlags: 0
@@ -3228,7 +3249,7 @@ Canvas:
   m_GameObject: {fileID: 706791011}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 2
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -3250,8 +3271,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706791011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 90.06514}
+  m_LocalScale: {x: 0.021786492, y: 0.021786492, z: 0.021786492}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1330999062}
@@ -3263,9 +3284,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.24007022, y: -0.31860483}
+  m_SizeDelta: {x: 612.00006, y: 459}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &757565116 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6564274119631198332, guid: ac24d7c36af8a624d9d236a97368665b, type: 3}
@@ -6625,7 +6646,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 823946406}
+  - {fileID: 1930235291}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1426574395
@@ -6641,7 +6662,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerInfo: {fileID: 11400000, guid: 1f73e35a8f6de3f43a8a0b9eff09d0fc, type: 2}
-  rotationalPoint: {fileID: 823946406}
+  rotationalPoint: {fileID: 1930235291}
+  bloonsMask:
+    serializedVersion: 2
+    m_Bits: 0
   projectilePrefab: {fileID: 757565116}
   numberOfProjectiles: 8
   projectileSpeed: 5
@@ -6905,6 +6929,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerInfo: {fileID: 11400000, guid: bda0d333444278b4e9c11276675cf92d, type: 2}
   rotationalPoint: {fileID: 455414268}
+  bloonsMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1516394742
 GameObject:
   m_ObjectHideFlags: 0
@@ -7658,7 +7685,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1723348105}
   - component: {fileID: 1723348104}
-  - component: {fileID: 1723348106}
   m_Layer: 0
   m_Name: Bomb Tower
   m_TagString: Untagged
@@ -8370,6 +8396,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerInfo: {fileID: 11400000, guid: 885c6d9b37677fe4ba13959905d16588, type: 2}
   rotationalPoint: {fileID: 1251184767}
+  bloonsMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1914643090
 GameObject:
   m_ObjectHideFlags: 0
@@ -8640,6 +8669,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927982017}
   m_CullTransparentMesh: 1
+--- !u!1 &1930235290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1930235291}
+  m_Layer: 0
+  m_Name: Rotational Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1930235291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930235290}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1426574394}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1944023282
 GameObject:
   m_ObjectHideFlags: 0
