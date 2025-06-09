@@ -13,8 +13,15 @@ public abstract class Tower : MonoBehaviour
     private float attackInterval;
 
     private bool showRange = false;
-    
 
+    protected Animator animator;
+    private bool isAttacking = false;
+    protected string ATTACK_STRING = "Attack";
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     protected virtual void Start()
     {
         if (towerInfo.SpeedString == "Slow")
@@ -49,6 +56,8 @@ public abstract class Tower : MonoBehaviour
             attackCooldown -= Time.deltaTime;
             if (attackCooldown <= 0f)
             {
+                isAttacking = true;
+                animator?.SetBool(ATTACK_STRING, isAttacking);
                 // Debug.Log($"{gameObject.name}: Attacking!");
                 Attack();
                 attackCooldown = attackInterval;
@@ -56,6 +65,11 @@ public abstract class Tower : MonoBehaviour
         }
         else
         {
+            if (isAttacking)
+            {
+                isAttacking = false;
+                animator?.SetBool(ATTACK_STRING, isAttacking); // STOP animating
+            }
             // Debug.Log($"{gameObject.name}: Mouse out of range.");
         }
     }

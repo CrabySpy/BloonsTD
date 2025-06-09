@@ -9388,6 +9388,10 @@ PrefabInstance:
       propertyPath: ProjectilePrefab
       value: 
       objectReference: {fileID: 4495980041287450006, guid: f8d8897b8b11cbb45938ce8143639c45, type: 3}
+    - target: {fileID: 4574267369243038088, guid: 1bed18d7e31ae5a468c8476d09cc3474, type: 3}
+      propertyPath: bloonsMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

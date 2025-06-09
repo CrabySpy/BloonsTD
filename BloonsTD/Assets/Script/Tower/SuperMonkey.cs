@@ -17,7 +17,11 @@ public class SuperMonkey : Tower
 
         GameObject projectile = Instantiate(ProjectilePrefab, firePoint.position, firePoint.rotation * Quaternion.Euler(0, 0, 270f));
 
-        
+        if (animator != null)
+        {
+            animator.SetTrigger("Attack");
+        }
+
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
