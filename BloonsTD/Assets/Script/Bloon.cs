@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class Balloon : MonoBehaviour
+public class Bloon : MonoBehaviour
 {
     public float speed = 1f;
     public Transform[] path;
     private int waypointIndex = 0;
 
-    [SerializeField] private int health = 1;
+    public int Health = 1;
 
     void Update()
     {
@@ -28,9 +28,9 @@ public class Balloon : MonoBehaviour
 
 public void TakeDamage(int damage)
 {
-    health -= damage;
+    Health -= damage;
 
-    if (health <= 0)
+    if (Health <= 0)
     {
         Pop(); // or Destroy(gameObject);
     }

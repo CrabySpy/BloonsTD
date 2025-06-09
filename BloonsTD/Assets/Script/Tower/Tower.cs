@@ -8,6 +8,7 @@ public abstract class Tower : MonoBehaviour
     [SerializeField] private LayerMask bloonsMask;
     [SerializeField] protected Transform firePoint;
 
+
     private bool isTargetInRange = false;
     private float attackCooldown;
     private float attackInterval;
@@ -17,6 +18,9 @@ public abstract class Tower : MonoBehaviour
     protected Animator animator;
     private bool isAttacking = false;
     protected string ATTACK_STRING = "Attack";
+
+    private TargetingMode targetingMode = TargetingMode.First;
+
 
     private void Awake()
     {
@@ -43,7 +47,7 @@ public abstract class Tower : MonoBehaviour
         }
     }
 
-    private void Update()
+    protected void Update()
     {
         CheckMouseTarget();
         ToggleRange();
@@ -102,6 +106,30 @@ public abstract class Tower : MonoBehaviour
 
         // Debug.Log($"{gameObject.name}: Rotating toward angle {angle:F1}°");
     }
+
+    // private Bloon SelectTarget() 
+    // {
+    //     // List<Bloon> bloons = GetBloonsInRange();
+    //     // return TargetingSystem.GetTarget(bloons, transform, targetingMode);
+    // }
+    
+    // Returns a list of bloons within the tower's range (serach algrithm)
+    // private List<Bloon> GetBloonsInRange()
+    // {
+    //     Collider[] hits = Physics.OverlapSphere(transform.position, towerInfo.Range, bloonsMask);
+    //     List<Bloon> bloons = new List<Bloon>();
+
+    //     foreach (var hit in hits)
+    //     {
+    //         Bloon bloon = hit.GetComponent<Bloon>();
+    //         if (bloon != null && !bloon.IsPopped)
+    //         {
+    //             bloons.Add(bloon);
+    //         }
+    //     }
+
+    //     return bloons;
+    // }
 
     private void OnMouseDown()
     {

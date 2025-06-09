@@ -29,7 +29,7 @@ public class BloonSpawner : MonoBehaviour
     void SpawnBloon(GameObject prefab, float speed)
     {
         GameObject bloon = Instantiate(prefab);
-        Balloon balloonScript = bloon.GetComponent<Balloon>();
+        Bloon balloonScript = bloon.GetComponent<Bloon>();
         balloonScript.speed = speed;
         balloonScript.SetPath(pathHolder.waypoints);
     }

@@ -241,7 +241,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -1.9067422, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -638,6 +638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   path: []
+  waypointIndex: 0
   health: 1
 --- !u!82 &86211301
 AudioSource:
@@ -3632,6 +3633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   path: []
+  waypointIndex: 0
   health: 1
 --- !u!82 &861859250
 AudioSource:
@@ -4038,6 +4040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   path: []
+  waypointIndex: 0
   health: 1
 --- !u!82 &896501119
 AudioSource:
@@ -4723,6 +4726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   path: []
+  waypointIndex: 0
   health: 1
 --- !u!82 &980623370
 AudioSource:
@@ -5612,6 +5616,10 @@ PrefabInstance:
     - target: {fileID: 3931230937135229640, guid: 1bed18d7e31ae5a468c8476d09cc3474, type: 3}
       propertyPath: m_Name
       value: Super Monkey (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574267369243038088, guid: 1bed18d7e31ae5a468c8476d09cc3474, type: 3}
+      propertyPath: targetingMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

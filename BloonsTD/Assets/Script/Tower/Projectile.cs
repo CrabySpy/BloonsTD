@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Balloon balloon = other.GetComponent<Balloon>();
+        Bloon balloon = other.GetComponent<Bloon>();
         if (balloon != null)
         {
             balloon.TakeDamage(damage);
