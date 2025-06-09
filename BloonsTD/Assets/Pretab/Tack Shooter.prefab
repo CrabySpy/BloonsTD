@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1177709583
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -3891136692897071254, guid: 543f18d0069c1c446b6cad4e6b73ec83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -106,8 +106,8 @@ MonoBehaviour:
   bloonsMask:
     serializedVersion: 2
     m_Bits: 0
-  projectilePrefab: {fileID: 0}
-  numberOfProjectiles: 8
+  firePoint: {fileID: 10232073320735833}
+  projectilePrefab: {fileID: 6618622851848156474, guid: 5ee4487150014304dbe71d43e25d3fe2, type: 3}
   projectileSpeed: 5
 --- !u!1 &4099981265009197971
 GameObject:

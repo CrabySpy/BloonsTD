@@ -22,6 +22,7 @@ public abstract class Tower : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
+    
     protected virtual void Start()
     {
         if (towerInfo.SpeedString == "Slow")
@@ -56,8 +57,12 @@ public abstract class Tower : MonoBehaviour
             attackCooldown -= Time.deltaTime;
             if (attackCooldown <= 0f)
             {
-                isAttacking = true;
-                animator?.SetBool(ATTACK_STRING, isAttacking);
+                if (animator != null)
+                {
+                    isAttacking = true;
+                    animator.SetBool(ATTACK_STRING, isAttacking);
+                }
+                
                 // Debug.Log($"{gameObject.name}: Attacking!");
                 Attack();
                 attackCooldown = attackInterval;
@@ -65,7 +70,7 @@ public abstract class Tower : MonoBehaviour
         }
         else
         {
-            if (isAttacking)
+            if (isAttacking && animator != null)
             {
                 isAttacking = false;
                 animator?.SetBool(ATTACK_STRING, isAttacking); // STOP animating
@@ -156,4 +161,6 @@ public abstract class Tower : MonoBehaviour
     }
 
     public abstract void Attack();
+
+    // public abstract void AnimationAttack();
 }
