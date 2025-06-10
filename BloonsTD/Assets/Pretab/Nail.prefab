@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5972509411090983465}
   - component: {fileID: 3800960212247841667}
   - component: {fileID: 6977188920403376286}
+  - component: {fileID: 1091601393912849672}
   m_Layer: 0
   m_Name: Nail
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -619927253
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -5159362228428509745, guid: 2abd2ab9368fadf4bbb1c461d0c1faca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -162,3 +163,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.74, y: 0.43}
   m_EdgeRadius: 0
+--- !u!114 &1091601393912849672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6618622851848156474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d684423b29521488c6024d2c50b1bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1

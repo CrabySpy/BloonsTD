@@ -8,25 +8,27 @@ public abstract class Tower : MonoBehaviour
     [SerializeField] private LayerMask bloonsMask;
     [SerializeField] protected Transform firePoint;
 
+    [SerializeField] private GameObject rangeCircle;
+
 
     private bool isTargetInRange = false;
     private float attackCooldown;
     private float attackInterval;
 
-    private bool showRange = false;
+    // private bool showRange = false;
 
     protected Animator animator;
     private bool isAttacking = false;
     protected string ATTACK_STRING = "Attack";
 
-    private TargetingMode targetingMode = TargetingMode.First;
+    //private TargetingMode targetingMode = TargetingMode.First;
 
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
     }
-    
+
     protected virtual void Start()
     {
         if (towerInfo.SpeedString == "Slow")
@@ -45,12 +47,21 @@ public abstract class Tower : MonoBehaviour
         {
             attackInterval = 0.1f;
         }
+        
+        if (rangeCircle != null && towerInfo != null)
+        {
+        // Because default sprite size = 1 unit radius, so scale to match towerInfo.Range:
+        float diameter = towerInfo.Range * 2f;
+        rangeCircle.transform.localScale = new Vector3(diameter, diameter, 1f);
+
+        // Make sure it starts hidden
+        rangeCircle.SetActive(false);
+        }
     }
 
     protected void Update()
     {
         CheckMouseTarget();
-        ToggleRange();
 
         if (isTargetInRange)
         {
@@ -130,61 +141,20 @@ public abstract class Tower : MonoBehaviour
 
     //     return bloons;
     // }
-
     private void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0)) // Left mouse click
+        if (rangeCircle != null)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.transform == transform)
-                {
-                    // Toggle showing the range circle
-                    showRange = !showRange;
-                    Debug.Log($"showing {gameObject.name} range");
-                }
-                else
-                {
-                    // Optional: Hide range if clicked elsewhere
-                    showRange = false;
-                }
-            }
-        }
-    }
-    
-
-    private void ToggleRange()
-    {
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            showRange = !showRange;
-            Debug.Log($"Toggle Range: {showRange}");
+            rangeCircle.SetActive(!rangeCircle.activeSelf);
         }
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        if (towerInfo != null)
-        {
-            if (showRange)
-            {
-                Handles.color = Color.white;
-                Handles.DrawWireDisc(transform.position, Vector3.forward, towerInfo.Range);
-            }
-        }
-    }
     private void OnDrawGizmos()
     {
         if (towerInfo != null)
         {
-            if (showRange)
-            {
                 Handles.color = Color.white;
                 Handles.DrawWireDisc(transform.position, Vector3.forward, towerInfo.Range);
-            }
         }
     }
 
