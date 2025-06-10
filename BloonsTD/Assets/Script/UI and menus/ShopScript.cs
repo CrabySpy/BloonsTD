@@ -13,15 +13,15 @@ public class ShopScript : MonoBehaviour
     private GameManager gameManager;
     public GameObject InfoBox;
     public GameObject DartMonkeyIcon;
-    private BoxCollider2D dartMonkeyCollider;
+    public BoxCollider2D dartMonkeyCollider;
     public GameObject TackShooterIcon;
-    private BoxCollider2D tackShooterCollider;
+    public BoxCollider2D tackShooterCollider;
     public GameObject IceMonkeyIcon;
-    private BoxCollider2D iceMonkeyCollider;
+    public BoxCollider2D iceMonkeyCollider;
     public GameObject BombTowerIcon;
-    private BoxCollider2D bombTowerCollider;
+    public BoxCollider2D bombTowerCollider;
     public GameObject SuperMonkeyIcon;
-    private BoxCollider2D superMonkeyCollider;
+    public BoxCollider2D superMonkeyCollider;
 
     public GameObject SortButton;
     private BoxCollider2D sortButtonCollider;
@@ -84,7 +84,7 @@ public class ShopScript : MonoBehaviour
         Positions[3] = new Vector2(5.07f, 1.18f);
         Positions[4] = new Vector2(5.78f, 1.17f);
 
-        //Stack overflow
+        //Stack overflow 87-95
         towerIconMap = new System.Collections.Generic.Dictionary<TowerInfo, GameObject>()
         {
             { TowerInfo[0], DartMonkeyIcon },
