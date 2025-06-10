@@ -2668,6 +2668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomb Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 6894067079561312320, guid: 992692a3b531b324eb3d0f5553f32492, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7862354167414027149, guid: 992692a3b531b324eb3d0f5553f32492, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.49
@@ -8501,6 +8505,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4799826046829953771, guid: ea589baddbd1fd74889c543f7dffc94b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932573760347831464, guid: ea589baddbd1fd74889c543f7dffc94b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8145225868030836305, guid: ea589baddbd1fd74889c543f7dffc94b, type: 3}

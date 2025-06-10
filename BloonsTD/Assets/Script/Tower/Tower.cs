@@ -9,6 +9,7 @@ public abstract class Tower : MonoBehaviour
     [SerializeField] protected Transform firePoint;
 
     [SerializeField] private GameObject rangeCircle;
+    private static Tower currentlySelectedTower = null;
 
 
     private bool isTargetInRange = false;
@@ -143,10 +144,35 @@ public abstract class Tower : MonoBehaviour
     // }
     private void OnMouseDown()
     {
-        if (rangeCircle != null)
+        // If clicking on this tower but it's not currently selected:
+        if (currentlySelectedTower != this)
         {
-            rangeCircle.SetActive(!rangeCircle.activeSelf);
+            // Hide the previous selection's range
+            if (currentlySelectedTower != null)
+                currentlySelectedTower.HideRange();
+
+            // Set this as the new selection
+            currentlySelectedTower = this;
+            ShowRange();
         }
+        else
+        {
+            // Clicking the same tower again toggles it off
+            HideRange();
+            currentlySelectedTower = null;
+        }
+    }
+
+    private void ShowRange()
+    {
+        if (rangeCircle != null)
+            rangeCircle.SetActive(true);
+    }
+
+    private void HideRange()
+    {
+        if (rangeCircle != null)
+            rangeCircle.SetActive(false);
     }
 
     private void OnDrawGizmos()
