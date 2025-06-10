@@ -464,7 +464,8 @@ GameObject:
   - component: {fileID: 86211298}
   - component: {fileID: 86211297}
   - component: {fileID: 86211296}
-  m_Layer: 0
+  - component: {fileID: 86211300}
+  m_Layer: 7
   m_Name: BlueBloon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,6 +605,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &86211300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86211295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b5d4f153b3df548bd3d6cad867ea83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  path: []
+  weakerBloonPrefab: {fileID: 0}
+  Health: 1
 --- !u!1 &135380404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,7 +1449,7 @@ Transform:
   m_GameObject: {fileID: 428710423}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.5536656, y: -0.13179202, z: 0.05433797}
+  m_LocalPosition: {x: 4.4463344, y: -1.1317921, z: 0.05433797}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1646,37 +1663,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bed18d7e31ae5a468c8476d09cc3474, type: 3}
---- !u!1 &461221331
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 461221332}
-  m_Layer: 0
-  m_Name: WaveManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &461221332
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461221331}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.122663, y: 1.0631007, z: 0.04245063}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &485680458
 GameObject:
   m_ObjectHideFlags: 0
@@ -3140,7 +3126,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3152,13 +3138,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758484122}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 428710425}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1314744548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &759043177
 PrefabInstance:
@@ -3365,7 +3351,8 @@ GameObject:
   - component: {fileID: 861859247}
   - component: {fileID: 861859246}
   - component: {fileID: 861859245}
-  m_Layer: 0
+  - component: {fileID: 861859249}
+  m_Layer: 7
   m_Name: GreenBloon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3505,6 +3492,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &861859249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861859244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b5d4f153b3df548bd3d6cad867ea83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  path: []
+  weakerBloonPrefab: {fileID: 0}
+  Health: 1
 --- !u!1 &865469522
 GameObject:
   m_ObjectHideFlags: 0
@@ -3656,7 +3659,8 @@ GameObject:
   - component: {fileID: 896501115}
   - component: {fileID: 896501114}
   - component: {fileID: 896501113}
-  m_Layer: 0
+  - component: {fileID: 896501117}
+  m_Layer: 7
   m_Name: RedBloon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3796,6 +3800,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &896501117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896501112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b5d4f153b3df548bd3d6cad867ea83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  path: []
+  weakerBloonPrefab: {fileID: 0}
+  Health: 1
 --- !u!1 &906188562
 GameObject:
   m_ObjectHideFlags: 0
@@ -4214,7 +4234,8 @@ GameObject:
   - component: {fileID: 980623367}
   - component: {fileID: 980623366}
   - component: {fileID: 980623365}
-  m_Layer: 0
+  - component: {fileID: 980623369}
+  m_Layer: 7
   m_Name: YellowBloon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4354,6 +4375,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &980623369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980623364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b5d4f153b3df548bd3d6cad867ea83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  path: []
+  weakerBloonPrefab: {fileID: 0}
+  Health: 1
 --- !u!1 &985827008
 GameObject:
   m_ObjectHideFlags: 0
@@ -5587,6 +5624,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244696699}
   m_CullTransparentMesh: 1
+--- !u!1 &1314744546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1314744548}
+  - component: {fileID: 1314744547}
+  m_Layer: 0
+  m_Name: WaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1314744547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314744546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3929bfc8270660c42914e1e943035046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 758484123}
+  path:
+  - {fileID: 396488763}
+  - {fileID: 404018796}
+  - {fileID: 546105496}
+  - {fileID: 1720992032}
+  - {fileID: 1711251180}
+  - {fileID: 1389538538}
+  - {fileID: 1393354365}
+  - {fileID: 584634588}
+  - {fileID: 1516394743}
+  - {fileID: 593778556}
+  - {fileID: 593121260}
+  - {fileID: 47141297}
+  - {fileID: 52386838}
+  - {fileID: 1198058202}
+  - {fileID: 249952825}
+  waves:
+  - bloonGroups:
+    - bloonPrefab: {fileID: 896501112}
+      count: 10
+      delayBetween: 0.5
+  - bloonGroups:
+    - bloonPrefab: {fileID: 896501112}
+      count: 15
+      delayBetween: 0.5
+  delayBetweenWaves: 3
+--- !u!4 &1314744548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314744546}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 758484123}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1318245640
 GameObject:
   m_ObjectHideFlags: 0
@@ -8141,6 +8250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1950568727}
   - component: {fileID: 1950568728}
+  - component: {fileID: 1950568729}
   m_Layer: 0
   m_Name: Shop
   m_TagString: Untagged
@@ -8213,6 +8323,24 @@ MonoBehaviour:
   Cost: {fileID: 1927982019}
   Speed: {fileID: 906188564}
   Desc: {fileID: 668140474}
+  waveManager: {fileID: 1314744547}
+  startRoundButton: {fileID: 985827008}
+--- !u!114 &1950568729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950568726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3929bfc8270660c42914e1e943035046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 0}
+  path: []
+  waves: []
+  delayBetweenWaves: 3
 --- !u!1001 &1989275083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8968,11 +9096,10 @@ SceneRoots:
   - {fileID: 1145874720}
   - {fileID: 1552531782}
   - {fileID: 1080026101}
-  - {fileID: 461221332}
-  - {fileID: 758484123}
   - {fileID: 861859248}
   - {fileID: 896501116}
   - {fileID: 980623368}
   - {fileID: 86211299}
   - {fileID: 1406498370}
   - {fileID: 1950568727}
+  - {fileID: 1314744548}

@@ -58,6 +58,8 @@ public class ShopScript : MonoBehaviour
     private System.Collections.Generic.Dictionary<TowerInfo, GameObject> towerIconMap;
 
     private TowerInfo[] currentSortedTowers;
+    public WaveManager waveManager;
+    public GameObject startRoundButton;
 
     void Start()
     {
@@ -94,6 +96,11 @@ public class ShopScript : MonoBehaviour
 
         currentSortedTowers = SortSearchMethods.BubbleSortCost(TowerInfo);
         UpdatePositions(currentSortedTowers);
+
+        if (startRoundButton != null)
+        {
+            startRoundButton.SetActive(true);
+        }
     }
 
     void UpdateText()
@@ -180,7 +187,7 @@ public class ShopScript : MonoBehaviour
                 {
                     ReverseOrder();
                 }
-                
+
                 SortCostDisplay.SetActive(true);
                 SortRangeDisplay.SetActive(false);
 
@@ -200,11 +207,16 @@ public class ShopScript : MonoBehaviour
                 {
                     ReverseOrder();
                 }
-                
+
                 SortCostDisplay.SetActive(false);
                 SortRangeDisplay.SetActive(true);
             }
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TryStartWave();
+        }
+
     }
 
     void InfoBoxMethod(int index)
@@ -237,9 +249,28 @@ public class ShopScript : MonoBehaviour
             reverse[i] = currentSortedTowers[currentSortedTowers.Length - 1 - i];
         }
         UpdatePositions(reverse);
-        
+
         currentSortedTowers = reverse;
     }
+    
+    public void TryStartWave() {
+        if (waveManager != null)
+        {
+            waveManager.StartNextWave(this);
+            if (startRoundButton != null)
+            {
+                startRoundButton.SetActive(false); // hide button while wave runs
+            }
+        }
+    }
+
+    public void OnWaveComplete() {
+        if (startRoundButton != null)
+        {
+            startRoundButton.SetActive(true); // re-enable when wave finishes
+        }
+    }
+
 }
 
 //b tower 900

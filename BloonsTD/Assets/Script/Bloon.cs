@@ -4,9 +4,10 @@ public class Bloon : MonoBehaviour
 {
     public float speed = 1f;
     public Transform[] path;
-    private int waypointIndex = 0;
-
+    public GameObject weakerBloonPrefab;
     public int Health = 1;
+
+    private int waypointIndex = 0;
 
     void Update()
     {
@@ -26,15 +27,15 @@ public class Bloon : MonoBehaviour
         }
     }
 
-public void TakeDamage(int damage)
-{
-    Health -= damage;
-
-    if (Health <= 0)
+    public void TakeDamage(int damage)
     {
-        Pop(); // or Destroy(gameObject);
+        Health -= damage;
+
+        if (Health <= 0)
+        {
+            Pop();
+        }
     }
-}
 
     public void SetPath(Transform[] waypoints)
     {
@@ -43,16 +44,28 @@ public void TakeDamage(int damage)
 
     void Pop()
     {
-    AudioSource audio = GetComponent<AudioSource>();
-    if (audio != null && audio.clip != null)
-    {
-        audio.Play();
-        Destroy(gameObject, audio.clip.length);
-    }
-    else
-    {
-        Destroy(gameObject);
-    }
-}
+        // Spawn weaker bloon, if one exists
+        if (weakerBloonPrefab != null)
+        {
+            GameObject newBloon = Instantiate(weakerBloonPrefab, transform.position, Quaternion.identity);
+            Bloon newBloonScript = newBloon.GetComponent<Bloon>();
 
+            if (newBloonScript != null)
+            {
+                newBloonScript.SetPath(path);
+            }
+        }
+
+        // Play pop sound if assigned
+        AudioSource audio = GetComponent<AudioSource>();
+        if (audio != null && audio.clip != null)
+        {
+            audio.Play();
+            Destroy(gameObject, audio.clip.length);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 }
