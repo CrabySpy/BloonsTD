@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.WSA;
 using Unity.Multiplayer.Center.Common;
 using System.Linq;
+using NUnit.Framework.Constraints;
 
 public class ShopScript : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class ShopScript : MonoBehaviour
 
     public GameObject LeastToMostButton;
     private BoxCollider2D leastToMostButtonCollider;
-    private bool leastToMostActive = true;
+    public bool leastToMostActive = true;
     public GameObject MostToLeast;
 
     public GameObject SortCostButton;
@@ -37,10 +38,10 @@ public class ShopScript : MonoBehaviour
     private bool sortCostActive;
     public GameObject SortCostDisplay;
 
-    public GameObject SortSpeedButton;
-    private BoxCollider2D sortSpeedButtonCollider;
-    private bool sortSpeedActive;
-    public GameObject SortSpeedDisplay;
+    public GameObject SortRangeButton;
+    private BoxCollider2D sortRangeButtonCollider;
+    private bool sortRangeActive;
+    public GameObject SortRangeDisplay;
 
 
     public TowerInfo[] TowerInfo;
@@ -51,6 +52,12 @@ public class ShopScript : MonoBehaviour
     public TMP_Text Desc;
 
     public SortSearchMethods SortSearchMethods;
+
+    private Vector2[] Positions;
+
+    private System.Collections.Generic.Dictionary<TowerInfo, GameObject> towerIconMap;
+
+    private TowerInfo[] currentSortedTowers;
 
     void Start()
     {
@@ -65,8 +72,28 @@ public class ShopScript : MonoBehaviour
         sortButtonCollider = SortButton.GetComponent<BoxCollider2D>();
         leastToMostButtonCollider = LeastToMostButton.GetComponent<BoxCollider2D>();
         sortCostButtonCollider = SortCostButton.GetComponent<BoxCollider2D>();
-        sortSpeedButtonCollider = SortSpeedButton.GetComponent<BoxCollider2D>();
+        sortRangeButtonCollider = SortRangeButton.GetComponent<BoxCollider2D>();
         SortCostDisplay.SetActive(true);
+
+        Positions = new Vector2[5];
+        Positions[0] = new Vector2(3.08f, 1.171395f);
+        Positions[1] = new Vector2(3.715f, 1.178f);
+        Positions[2] = new Vector2(4.4f, 1.19f);
+        Positions[3] = new Vector2(5.07f, 1.18f);
+        Positions[4] = new Vector2(5.78f, 1.17f);
+
+        //Stack overflow
+        towerIconMap = new System.Collections.Generic.Dictionary<TowerInfo, GameObject>()
+        {
+            { TowerInfo[0], DartMonkeyIcon },
+            { TowerInfo[1], BombTowerIcon },
+            { TowerInfo[2], SuperMonkeyIcon },
+            { TowerInfo[3], TackShooterIcon },
+            { TowerInfo[4], IceMonkeyIcon }
+        };
+
+        currentSortedTowers = SortSearchMethods.BubbleSortCost(TowerInfo);
+        UpdatePositions(currentSortedTowers);
     }
 
     void UpdateText()
@@ -79,30 +106,35 @@ public class ShopScript : MonoBehaviour
     void Update()
     {
         Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (dartMonkeyCollider == Physics2D.OverlapPoint(worldPoint))
+
+
+        //Lines 104-135 chatgpt was used
+        BoxCollider2D hitCollider = Physics2D.OverlapPoint(worldPoint) as BoxCollider2D;
+
+        if (hitCollider != null)
         {
-            InfoBoxMethod(0);
-            InfoBox.SetActive(true);
-        }
-        else if (tackShooterCollider == Physics2D.OverlapPoint(worldPoint))
-        {
-            InfoBoxMethod(3);
-            InfoBox.SetActive(true);
-        }
-        else if (iceMonkeyCollider == Physics2D.OverlapPoint(worldPoint))
-        {
-            InfoBoxMethod(4);
-            InfoBox.SetActive(true);
-        }
-        else if (bombTowerCollider == Physics2D.OverlapPoint(worldPoint))
-        {
-            InfoBoxMethod(1);
-            InfoBox.SetActive(true);
-        }
-        else if (superMonkeyCollider == Physics2D.OverlapPoint(worldPoint))
-        {
-            InfoBoxMethod(2);
-            InfoBox.SetActive(true);
+            int index = -1;
+            for (int i = 0; i < TowerInfo.Length; i++)
+            {
+                if (towerIconMap.TryGetValue(TowerInfo[i], out GameObject icon))
+                {
+                    BoxCollider2D collider = icon.GetComponent<BoxCollider2D>();
+                    if (collider == hitCollider)
+                    {
+                        index = i;
+                        break;
+                    }
+                }
+            }
+            if (index != -1)
+            {
+                InfoBoxMethod(index);
+                InfoBox.SetActive(true);
+            }
+            else
+            {
+                InfoBox.SetActive(false);
+            }
         }
         else
         {
@@ -125,32 +157,52 @@ public class ShopScript : MonoBehaviour
             if (leastToMostButtonCollider == Physics2D.OverlapPoint(worldPoint) && leastToMostActive == true)
             {
                 leastToMostActive = false;
+                ReverseOrder();
                 MostToLeast.SetActive(true);
             }
             else if (leastToMostButtonCollider == Physics2D.OverlapPoint(worldPoint) && leastToMostActive == false)
             {
                 leastToMostActive = true;
+                ReverseOrder();
                 MostToLeast.SetActive(false);
             }
 
             if (sortCostButtonCollider == Physics2D.OverlapPoint(worldPoint) && sortCostActive == false)
             {
                 sortCostActive = true;
-                sortSpeedActive = false;
-                TowerInfo[] sortedTowers = SortSearchMethods.BubbleSort(TowerInfo);
-                Debug.Log(string.Join(" -> ", sortedTowers.Select(t => t.Name + "(" + t.Cost + ")")));
+                sortRangeActive = false;
+                currentSortedTowers = SortSearchMethods.BubbleSortCost(TowerInfo);
+                if (leastToMostActive == true)
+                {
+                    UpdatePositions(currentSortedTowers);
+                }
+                else if (leastToMostActive == false)
+                {
+                    ReverseOrder();
+                }
+                
                 SortCostDisplay.SetActive(true);
-                SortSpeedDisplay.SetActive(false);
+                SortRangeDisplay.SetActive(false);
 
 
             }
 
-            if (sortSpeedButtonCollider == Physics2D.OverlapPoint(worldPoint) && sortSpeedActive == false)
+            if (sortRangeButtonCollider == Physics2D.OverlapPoint(worldPoint) && sortRangeActive == false)
             {
                 sortCostActive = false;
-                sortSpeedActive = true;
+                sortRangeActive = true;
+                currentSortedTowers = SortSearchMethods.BubbleSortRange(TowerInfo);
+                if (leastToMostActive == true)
+                {
+                    UpdatePositions(currentSortedTowers);
+                }
+                else if (leastToMostActive == false)
+                {
+                    ReverseOrder();
+                }
+                
                 SortCostDisplay.SetActive(false);
-                SortSpeedDisplay.SetActive(true);
+                SortRangeDisplay.SetActive(true);
             }
         }
     }
@@ -164,14 +216,34 @@ public class ShopScript : MonoBehaviour
         Desc.text = SelectedTower.Description;
     }
 
-   // void UpdatePositions(TowerInfo[] Tower)
-   // {
-   //     for (int i = 0; i < Tower.Length; i++)
-   //     {
-   //         if (i = 0)
-   //         {
-   //             
-   //         }
-   //     }
-   // }
+    void UpdatePositions(TowerInfo[] sortedTowers)
+    {
+        for (int i = 0; i < sortedTowers.Length; i++)
+        {
+            Vector2 targetPos = Positions[i];
+            //Stack overflow 
+            if (towerIconMap.TryGetValue(sortedTowers[i], out GameObject icon))
+            {
+                icon.transform.localPosition = targetPos;
+            }
+        }
+    }
+
+    void ReverseOrder()
+    {
+        TowerInfo[] reverse = new TowerInfo[currentSortedTowers.Length];
+        for (int i = 0; i < currentSortedTowers.Length; i++)
+        {
+            reverse[i] = currentSortedTowers[currentSortedTowers.Length - 1 - i];
+        }
+        UpdatePositions(reverse);
+        
+        currentSortedTowers = reverse;
+    }
 }
+
+//b tower 900
+//dart 250
+//ice 850
+//super 4000
+//tack 400

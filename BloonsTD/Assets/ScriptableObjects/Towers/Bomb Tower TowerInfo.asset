@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Bomb Tower
   Cost: 900
-  Speed: Medium
+  Speed: 0
   Range: 2
   Description: Launches a bomb that explodes on impact. Can upgrade to bigger bombs
     and longer range.
