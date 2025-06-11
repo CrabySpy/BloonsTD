@@ -192,28 +192,4 @@ public class GameManager : MonoBehaviour
         SuperMonkeySprite.transform.position = reset;
 
     }
-
-    // void Update()
-    // {
-    //     if (Input.GetMouseButtonDown(0))  // Left mouse click
-    //     {
-    //         Vector2 mousePos = Input.mousePosition;
-
-    //         // Convert screen point to Canvas local position
-    //         RectTransformUtility.ScreenPointToLocalPointInRectangle(
-    //             canvas.transform as RectTransform, 
-    //             mousePos, 
-    //             canvas.worldCamera, 
-    //             out Vector2 localPoint);
-
-    //         // Instantiate prefab as child of the Canvas
-    //         GameObject newPretab = Instantiate(pretabPrefab, canvas.transform);
-
-    //         // Set the local position of the new tab
-    //         newPretab.GetComponent<RectTransform>().localPosition = localPoint;
-
-    //         // Optional: Set name or do other setup
-    //         newPretab.name = "PretabInstance";
-    //     }
-    // }
 }

@@ -60,6 +60,7 @@ public class ShopScript : MonoBehaviour
     private TowerInfo[] currentSortedTowers;
     public WaveManager waveManager;
     public GameObject startRoundButton;
+    private BoxCollider2D startRoundButtonCollider;
     public int Rounds = 0;
     public int MoneyVar = 650;
 
@@ -78,6 +79,7 @@ public class ShopScript : MonoBehaviour
         sortCostButtonCollider = SortCostButton.GetComponent<BoxCollider2D>();
         sortRangeButtonCollider = SortRangeButton.GetComponent<BoxCollider2D>();
         SortCostDisplay.SetActive(true);
+        startRoundButtonCollider = startRoundButton.GetComponent<BoxCollider2D>();
         Rounds = 0;
         UpdateRoundText();
 
@@ -195,8 +197,11 @@ public class ShopScript : MonoBehaviour
 
                 SortCostDisplay.SetActive(true);
                 SortRangeDisplay.SetActive(false);
+            }
 
-
+            if (startRoundButtonCollider == Physics2D.OverlapPoint(worldPoint))
+            {
+                TryStartWave();
             }
 
             if (sortRangeButtonCollider == Physics2D.OverlapPoint(worldPoint) && sortRangeActive == false)
@@ -220,7 +225,7 @@ public class ShopScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TryStartWave();
-        }
+        } 
 
     }
 
