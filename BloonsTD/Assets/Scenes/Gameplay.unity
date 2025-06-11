@@ -765,7 +765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b5d4f153b3df548bd3d6cad867ea83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 2.6
   path: []
   weakerBloonPrefab: {fileID: 896501112}
   Health: 1
@@ -4415,7 +4415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b5d4f153b3df548bd3d6cad867ea83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 3.5
   path: []
   weakerBloonPrefab: {fileID: 86211295}
   Health: 1
@@ -4811,7 +4811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b5d4f153b3df548bd3d6cad867ea83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   path: []
   weakerBloonPrefab: {fileID: 0}
   Health: 1
@@ -5387,7 +5387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b5d4f153b3df548bd3d6cad867ea83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 4.5
   path: []
   weakerBloonPrefab: {fileID: 861859244}
   Health: 1
@@ -6680,13 +6680,16 @@ MonoBehaviour:
   waves:
   - bloonGroups:
     - bloonPrefab: {fileID: 896501112}
-      count: 3
-      delayBetween: 2
+      count: 10
+      delayBetween: 0.4
   - bloonGroups:
     - bloonPrefab: {fileID: 896501112}
-      count: 5
-      delayBetween: 2
+      count: 20
+      delayBetween: 0.5
   - bloonGroups:
+    - bloonPrefab: {fileID: 86211295}
+      count: 3
+      delayBetween: 2
     - bloonPrefab: {fileID: 86211295}
       count: 3
       delayBetween: 2
@@ -6732,6 +6735,16 @@ MonoBehaviour:
     - bloonPrefab: {fileID: 896501112}
       count: 5
       delayBetween: 2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 861859244}
+      count: 7
+      delayBetween: 2
+    - bloonPrefab: {fileID: 86211295}
+      count: 7
+      delayBetween: 1
+    - bloonPrefab: {fileID: 896501112}
+      count: 7
+      delayBetween: 0.5
   - bloonGroups:
     - bloonPrefab: {fileID: 861859244}
       count: 7

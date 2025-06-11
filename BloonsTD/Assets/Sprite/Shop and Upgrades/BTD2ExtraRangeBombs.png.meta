@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 87968c4e9c484e74eacc63bafed1567c
+guid: 30d8e0a94c591144d9eccfbd13f1ecd3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1719204879055745111
-    second: Browser Games - Bloons TD - Tower Upgrades_0
+      213: 6319607607343231974
+    second: BTD2ExtraRangeBombs_0
+  - first:
+      213: -4000593050042212314
+    second: BTD2ExtraRangeBombs_1
+  - first:
+      213: -2383232316416576893
+    second: BTD2ExtraRangeBombs_2
+  - first:
+      213: -5332036596082519329
+    second: BTD2ExtraRangeBombs_3
+  - first:
+      213: -5932347869626346712
+    second: BTD2ExtraRangeBombs_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,106 +108,115 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Selection Box 0
+      name: BTD2ExtraRangeBombs_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 2229
-        width: 67
-        height: 143
+        x: 0
+        y: 3
+        width: 25
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9af83cf65482428e0800000000000000
-      internalID: -1719204879055745111
+      spriteID: 6e3bc8bd2a1c3b750800000000000000
+      internalID: 6319607607343231974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Selection Box 1
+      name: BTD2ExtraRangeBombs_1
       rect:
         serializedVersion: 2
-        x: 76
-        y: 2229
-        width: 67
-        height: 143
+        x: 16
+        y: 28
+        width: 16
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d37edf111c83ad642ba4a78ae690d66b
-      internalID: 1490953516
+      spriteID: 620665921d90b78c0800000000000000
+      internalID: -4000593050042212314
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Selection Box 2
+      name: BTD2ExtraRangeBombs_2
       rect:
         serializedVersion: 2
-        x: 147
-        y: 2229
-        width: 67
-        height: 143
+        x: 31
+        y: 23
+        width: 9
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 75602b046e1a56042a77542478591055
-      internalID: -151538680
+      spriteID: 38232cac5de0deed0800000000000000
+      internalID: -2383232316416576893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Selectio Box 3
+      name: BTD2ExtraRangeBombs_3
       rect:
         serializedVersion: 2
-        x: 219
-        y: 2229
-        width: 67
-        height: 143
+        x: 38
+        y: 12
+        width: 6
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9ae5aa5b8c26a4041989e5d5095354b2
-      internalID: 1283676056
+      spriteID: fd25e1957fcc006b0800000000000000
+      internalID: -5332036596082519329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BTD2ExtraRangeBombs_4
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 0
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82350e22b011cada0800000000000000
+      internalID: -5932347869626346712
       vertices: []
       indices: 
       edges: []
@@ -204,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ef79530af3950d547a050906689efde7
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -213,11 +234,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Selectio Box 3: 1283676056
-      Selection Box 0: -1719204879055745111
-      Selection Box 1: 1490953516
-      Selection Box 2: -151538680
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

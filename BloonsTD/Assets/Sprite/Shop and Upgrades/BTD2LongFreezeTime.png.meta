@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 87968c4e9c484e74eacc63bafed1567c
+guid: 0b24b20122485d8419642257f4b787e0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1719204879055745111
-    second: Browser Games - Bloons TD - Tower Upgrades_0
+      213: -8452262838012508422
+    second: BTD2LongFreezeTime_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,106 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Selection Box 0
+      name: BTD2LongFreezeTime_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 2229
-        width: 67
-        height: 143
+        x: 0
+        y: 0
+        width: 152
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9af83cf65482428e0800000000000000
-      internalID: -1719204879055745111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Selection Box 1
-      rect:
-        serializedVersion: 2
-        x: 76
-        y: 2229
-        width: 67
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d37edf111c83ad642ba4a78ae690d66b
-      internalID: 1490953516
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Selection Box 2
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 2229
-        width: 67
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75602b046e1a56042a77542478591055
-      internalID: -151538680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Selectio Box 3
-      rect:
-        serializedVersion: 2
-        x: 219
-        y: 2229
-        width: 67
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ae5aa5b8c26a4041989e5d5095354b2
-      internalID: 1283676056
+      spriteID: af687081bb783ba80800000000000000
+      internalID: -8452262838012508422
       vertices: []
       indices: 
       edges: []
@@ -204,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ef79530af3950d547a050906689efde7
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -213,11 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Selectio Box 3: 1283676056
-      Selection Box 0: -1719204879055745111
-      Selection Box 1: 1490953516
-      Selection Box 2: -151538680
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
