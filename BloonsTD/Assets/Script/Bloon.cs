@@ -8,6 +8,7 @@ public class Bloon : MonoBehaviour
     public int Health = 1;
     private int waypointIndex = 0;
     public bool isClone = false;
+    public ShopScript ShopScript;
 
     void Update()
     {
@@ -51,17 +52,20 @@ public class Bloon : MonoBehaviour
 
     void Pop()
     {
-    if (weakerBloonPrefab != null) {
-        GameObject newBloon = Instantiate(weakerBloonPrefab, transform.position, Quaternion.identity);
-        Bloon newBloonScript = newBloon.GetComponent<Bloon>();
-
-        if (newBloonScript != null)
+        ShopScript.MoneyVar = ShopScript.MoneyVar + 1;
+        ShopScript.UpdateRoundText();
+        if (weakerBloonPrefab != null)
         {
-            newBloonScript.SetPath(path, waypointIndex);
-            newBloonScript.speed = speed;
-            newBloonScript.isClone = true;
+            GameObject newBloon = Instantiate(weakerBloonPrefab, transform.position, Quaternion.identity);
+            Bloon newBloonScript = newBloon.GetComponent<Bloon>();
+
+            if (newBloonScript != null)
+            {
+                newBloonScript.SetPath(path, waypointIndex);
+                newBloonScript.speed = speed;
+                newBloonScript.isClone = true;
+            }
         }
-    }
 
 
         // Play pop sound if assigned

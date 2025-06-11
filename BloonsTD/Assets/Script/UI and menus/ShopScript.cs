@@ -61,6 +61,7 @@ public class ShopScript : MonoBehaviour
     public WaveManager waveManager;
     public GameObject startRoundButton;
     public int Rounds = 0;
+    public int MoneyVar = 650;
 
     void Start()
     {
@@ -259,12 +260,23 @@ public class ShopScript : MonoBehaviour
     
     public void IncrementRound() {
         Rounds++;
+        if (Rounds != 1)
+        {
+            MoneyVar = MoneyVar + 101;
+        }
         UpdateRoundText();
     }
 
-    private void UpdateRoundText() {
-        if (RoundVar != null) {
+    public void UpdateRoundText()
+    {
+        if (RoundVar != null)
+        {
             RoundVar.text = Rounds.ToString();
+        }
+
+        if (Money != null)
+        {
+            Money.text = MoneyVar.ToString();
         }
     }
     

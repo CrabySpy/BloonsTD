@@ -18,6 +18,12 @@ public class GameManager : MonoBehaviour
     public GameObject ValidPlacementDetector;
     private PolygonCollider2D mapPlacementCollider;
     private Vector2 reset;
+
+    public GameObject pretabDart;
+    public GameObject pretabTack;
+    public GameObject pretabIce;
+    public GameObject pretabBomb;
+    public GameObject pretabSuper;
     void Awake()
     {
         player = new GameData(0, 650, 40);
@@ -70,6 +76,71 @@ public class GameManager : MonoBehaviour
             if ((clickedCollider.transform.IsChildOf(ValidPlacementDetector.transform)) && iconActive == true)
             {
                 Debug.Log("Clicked valid area");
+                if (activeIcon == "DartMonkey" && shopScript.MoneyVar >= 250)
+                {
+                    GameObject newPretab = Instantiate(pretabDart);
+
+                    newPretab.transform.position = worldPoint;
+
+                    newPretab.name = "DartMonkeyPretab";
+
+                    iconActive = false;
+                    shopScript.MoneyVar = shopScript.MoneyVar - 250;
+                    shopScript.UpdateRoundText();
+                    ResetPositions();
+                }
+                else if (activeIcon == "TackShooter" && shopScript.MoneyVar >= 400)
+                {
+                    GameObject newPretab = Instantiate(pretabTack);
+
+                    newPretab.transform.position = worldPoint;
+
+                    newPretab.name = "DartMonkeyPretab";
+
+                    iconActive = false;
+                    shopScript.MoneyVar = shopScript.MoneyVar - 400;
+                    shopScript.UpdateRoundText();
+                    ResetPositions();
+                }
+                else if (activeIcon == "IceMonkey" && shopScript.MoneyVar >= 850)
+                {
+                    GameObject newPretab = Instantiate(pretabIce);
+
+                    newPretab.transform.position = worldPoint;
+
+                    newPretab.name = "DartMonkeyPretab";
+
+                    iconActive = false;
+                    shopScript.MoneyVar = shopScript.MoneyVar - 850;
+                    shopScript.UpdateRoundText();
+                    ResetPositions();
+                }
+                else if (activeIcon == "SuperMonkey" && shopScript.MoneyVar >= 4000)
+                {
+                    GameObject newPretab = Instantiate(pretabSuper);
+
+                    newPretab.transform.position = worldPoint;
+
+                    newPretab.name = "DartMonkeyPretab";
+
+                    iconActive = false;
+                    shopScript.MoneyVar = shopScript.MoneyVar - 4000;
+                    shopScript.UpdateRoundText();
+                    ResetPositions();
+                }
+                else if (activeIcon == "BombTower" && shopScript.MoneyVar >= 900)
+                {
+                    GameObject newPretab = Instantiate(pretabBomb);
+
+                    newPretab.transform.position = worldPoint;
+
+                    newPretab.name = "DartMonkeyPretab";
+
+                    iconActive = false;
+                    shopScript.MoneyVar = shopScript.MoneyVar - 900;
+                    shopScript.UpdateRoundText();
+                    ResetPositions();
+                }
             }
             else if (clickedCollider != mapPlacementCollider
                 && clickedCollider != shopScript.dartMonkeyCollider
@@ -83,8 +154,8 @@ public class GameManager : MonoBehaviour
                 iconActive = false;
                 ResetPositions();
             }
-            
-            
+
+
         }
 
         if (iconActive == true)
@@ -121,4 +192,28 @@ public class GameManager : MonoBehaviour
         SuperMonkeySprite.transform.position = reset;
 
     }
+
+    // void Update()
+    // {
+    //     if (Input.GetMouseButtonDown(0))  // Left mouse click
+    //     {
+    //         Vector2 mousePos = Input.mousePosition;
+
+    //         // Convert screen point to Canvas local position
+    //         RectTransformUtility.ScreenPointToLocalPointInRectangle(
+    //             canvas.transform as RectTransform, 
+    //             mousePos, 
+    //             canvas.worldCamera, 
+    //             out Vector2 localPoint);
+
+    //         // Instantiate prefab as child of the Canvas
+    //         GameObject newPretab = Instantiate(pretabPrefab, canvas.transform);
+
+    //         // Set the local position of the new tab
+    //         newPretab.GetComponent<RectTransform>().localPosition = localPoint;
+
+    //         // Optional: Set name or do other setup
+    //         newPretab.name = "PretabInstance";
+    //     }
+    // }
 }

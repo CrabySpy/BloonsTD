@@ -857,6 +857,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &169032606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1438170888812728726, guid: 992692a3b531b324eb3d0f5553f32492, type: 3}
+  m_PrefabInstance: {fileID: 654116893}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &192501872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,6 +1574,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &385167751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8145225868030836305, guid: ea589baddbd1fd74889c543f7dffc94b, type: 3}
+  m_PrefabInstance: {fileID: 1989275083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &396488762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,11 +1949,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654449325082739924, guid: 1bed18d7e31ae5a468c8476d09cc3474, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.07
+      value: 15.33
       objectReference: {fileID: 0}
     - target: {fileID: 3654449325082739924, guid: 1bed18d7e31ae5a468c8476d09cc3474, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.9
+      value: 14.6
       objectReference: {fileID: 0}
     - target: {fileID: 3654449325082739924, guid: 1bed18d7e31ae5a468c8476d09cc3474, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2170,11 +2180,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2285483424601144603, guid: f55bf2c5a25f8c44ebe98c11075f314c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.3851366
+      value: 4.9
       objectReference: {fileID: 0}
     - target: {fileID: 2285483424601144603, guid: f55bf2c5a25f8c44ebe98c11075f314c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3833323
+      value: 14.34
       objectReference: {fileID: 0}
     - target: {fileID: 2285483424601144603, guid: f55bf2c5a25f8c44ebe98c11075f314c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3115,11 +3125,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7862354167414027149, guid: 992692a3b531b324eb3d0f5553f32492, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.57
+      value: 22.09
       objectReference: {fileID: 0}
     - target: {fileID: 7862354167414027149, guid: 992692a3b531b324eb3d0f5553f32492, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.13
+      value: 14.83
       objectReference: {fileID: 0}
     - target: {fileID: 7862354167414027149, guid: 992692a3b531b324eb3d0f5553f32492, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3860,7 +3870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2285483424601144603, guid: f55bf2c5a25f8c44ebe98c11075f314c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.76
+      value: 13.67
       objectReference: {fileID: 0}
     - target: {fileID: 2285483424601144603, guid: f55bf2c5a25f8c44ebe98c11075f314c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4250,6 +4260,11 @@ Transform:
   - {fileID: 1377131037}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &828994070 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4704614724841604028, guid: f55bf2c5a25f8c44ebe98c11075f314c, type: 3}
+  m_PrefabInstance: {fileID: 1601915276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &861859244
 GameObject:
   m_ObjectHideFlags: 0
@@ -5688,6 +5703,11 @@ MonoBehaviour:
   BombTowerSprite: {fileID: 1377131036}
   SuperMonkeySprite: {fileID: 799921499}
   ValidPlacementDetector: {fileID: 1989206363}
+  pretabDart: {fileID: 828994070}
+  pretabTack: {fileID: 1172635443}
+  pretabIce: {fileID: 385167751}
+  pretabBomb: {fileID: 169032606}
+  pretabSuper: {fileID: 1560667653}
 --- !u!4 &1080026101
 Transform:
   m_ObjectHideFlags: 0
@@ -6028,6 +6048,11 @@ MonoBehaviour:
   MuteSound: {fileID: 1813401202}
   MuteSoundHider: {fileID: 1841540097}
   pauseMenuButton: {fileID: 1552531785}
+--- !u!1 &1172635443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2527027436872558963, guid: f991128567c860f47a2ff24b4bb08ec1, type: 3}
+  m_PrefabInstance: {fileID: 1198875529}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1181118422
 GameObject:
   m_ObjectHideFlags: 0
@@ -6179,11 +6204,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1083785710495219348, guid: f991128567c860f47a2ff24b4bb08ec1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.34
+      value: 19.92
       objectReference: {fileID: 0}
     - target: {fileID: 1083785710495219348, guid: f991128567c860f47a2ff24b4bb08ec1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.54
+      value: 11.21
       objectReference: {fileID: 0}
     - target: {fileID: 1083785710495219348, guid: f991128567c860f47a2ff24b4bb08ec1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8187,6 +8212,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1145874719}
   turnedOn: 0
+--- !u!1 &1560667653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3931230937135229640, guid: 1bed18d7e31ae5a468c8476d09cc3474, type: 3}
+  m_PrefabInstance: {fileID: 448113234}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1594277277
 GameObject:
   m_ObjectHideFlags: 0
@@ -8288,7 +8318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2285483424601144603, guid: f55bf2c5a25f8c44ebe98c11075f314c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6777716
+      value: 13.42
       objectReference: {fileID: 0}
     - target: {fileID: 2285483424601144603, guid: f55bf2c5a25f8c44ebe98c11075f314c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9730,6 +9760,7 @@ MonoBehaviour:
   waveManager: {fileID: 1314744547}
   startRoundButton: {fileID: 985827008}
   Rounds: 0
+  MoneyVar: 650
 --- !u!114 &1950568729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9999,11 +10030,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4799826046829953771, guid: ea589baddbd1fd74889c543f7dffc94b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.8037074
+      value: 9.63
       objectReference: {fileID: 0}
     - target: {fileID: 4799826046829953771, guid: ea589baddbd1fd74889c543f7dffc94b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3103433
+      value: 14.32
       objectReference: {fileID: 0}
     - target: {fileID: 4799826046829953771, guid: ea589baddbd1fd74889c543f7dffc94b, type: 3}
       propertyPath: m_LocalPosition.z
