@@ -52,8 +52,7 @@ public class Bloon : MonoBehaviour
 
     void Pop()
     {
-        ShopScript.MoneyVar = ShopScript.MoneyVar + 1;
-        ShopScript.UpdateRoundText();
+
         if (weakerBloonPrefab != null)
         {
             GameObject newBloon = Instantiate(weakerBloonPrefab, transform.position, Quaternion.identity);
@@ -64,9 +63,15 @@ public class Bloon : MonoBehaviour
                 newBloonScript.SetPath(path, waypointIndex);
                 newBloonScript.speed = speed;
                 newBloonScript.isClone = true;
+                newBloonScript.ShopScript = this.ShopScript;
             }
         }
 
+        if (ShopScript != null)
+        {
+            ShopScript.MoneyVar += 1;
+            ShopScript.UpdateRoundText();
+        }
 
         // Play pop sound if assigned
         AudioSource audio = GetComponent<AudioSource>();

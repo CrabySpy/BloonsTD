@@ -770,6 +770,7 @@ MonoBehaviour:
   weakerBloonPrefab: {fileID: 896501112}
   Health: 1
   isClone: 0
+  ShopScript: {fileID: 1950568728}
 --- !u!1 &135380404
 GameObject:
   m_ObjectHideFlags: 0
@@ -4435,6 +4436,7 @@ MonoBehaviour:
   weakerBloonPrefab: {fileID: 86211295}
   Health: 1
   isClone: 0
+  ShopScript: {fileID: 1950568728}
 --- !u!1 &865469522
 GameObject:
   m_ObjectHideFlags: 0
@@ -4831,6 +4833,7 @@ MonoBehaviour:
   weakerBloonPrefab: {fileID: 0}
   Health: 1
   isClone: 0
+  ShopScript: {fileID: 1950568728}
 --- !u!1 &906188562
 GameObject:
   m_ObjectHideFlags: 0
@@ -5407,6 +5410,7 @@ MonoBehaviour:
   weakerBloonPrefab: {fileID: 861859244}
   Health: 1
   isClone: 0
+  ShopScript: {fileID: 1950568728}
 --- !u!1 &985827008
 GameObject:
   m_ObjectHideFlags: 0
@@ -8323,11 +8327,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2285483424601144603, guid: f55bf2c5a25f8c44ebe98c11075f314c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.115027
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 2285483424601144603, guid: f55bf2c5a25f8c44ebe98c11075f314c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.42
+      value: 1.67
       objectReference: {fileID: 0}
     - target: {fileID: 2285483424601144603, guid: f55bf2c5a25f8c44ebe98c11075f314c, type: 3}
       propertyPath: m_LocalPosition.z
