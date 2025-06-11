@@ -7,7 +7,7 @@ using NUnit.Framework.Constraints;
 
 public class ShopScript : MonoBehaviour
 {
-    public TMP_Text Round;
+    public TMP_Text RoundVar;
     public TMP_Text Money;
     public TMP_Text Lives;
     private GameManager gameManager;
@@ -60,6 +60,7 @@ public class ShopScript : MonoBehaviour
     private TowerInfo[] currentSortedTowers;
     public WaveManager waveManager;
     public GameObject startRoundButton;
+    public int Rounds = 0;
 
     void Start()
     {
@@ -76,6 +77,9 @@ public class ShopScript : MonoBehaviour
         sortCostButtonCollider = SortCostButton.GetComponent<BoxCollider2D>();
         sortRangeButtonCollider = SortRangeButton.GetComponent<BoxCollider2D>();
         SortCostDisplay.SetActive(true);
+        Rounds = 0;
+        UpdateRoundText();
+
 
         Positions = new Vector2[5];
         Positions[0] = new Vector2(3.08f, 1.171395f);
@@ -105,7 +109,7 @@ public class ShopScript : MonoBehaviour
 
     void UpdateText()
     {
-        Round.text = gameManager.player.Rounds.ToString();
+        RoundVar.text = gameManager.player.Rounds.ToString();
         Money.text = gameManager.player.Money.ToString();
         Lives.text = gameManager.player.Lives.ToString();
     }
@@ -253,7 +257,19 @@ public class ShopScript : MonoBehaviour
         currentSortedTowers = reverse;
     }
     
-    public void TryStartWave() {
+    public void IncrementRound() {
+        Rounds++;
+        UpdateRoundText();
+    }
+
+    private void UpdateRoundText() {
+        if (RoundVar != null) {
+            RoundVar.text = Rounds.ToString();
+        }
+    }
+    
+    public void TryStartWave()
+    {
         if (waveManager != null)
         {
             waveManager.StartNextWave(this);

@@ -26,12 +26,12 @@ public class WaveManager : MonoBehaviour
     private bool isSpawning = false;
     private ShopScript shopUI;
 
-    // Called from ShopScript when "Start Round" is pressed
     public void StartNextWave(ShopScript caller)
     {
         if (!isSpawning && currentWaveIndex < waves.Length)
         {
-            shopUI = caller; // save reference to UI
+            shopUI = caller;
+            shopUI.IncrementRound();
             StartCoroutine(SpawnWave(waves[currentWaveIndex]));
             currentWaveIndex++;
         }
@@ -40,8 +40,6 @@ public class WaveManager : MonoBehaviour
             Debug.Log("All waves completed!");
         }
     }
-
-    // Spawns all bloons in the current wave, one group at a time
     IEnumerator SpawnWave(Wave wave)
     {
         isSpawning = true;
@@ -51,7 +49,15 @@ public class WaveManager : MonoBehaviour
             for (int i = 0; i < group.count; i++)
             {
                 GameObject bloon = Instantiate(group.bloonPrefab, spawnPoint.position, Quaternion.identity);
-                bloon.GetComponent<Bloon>().SetPath(path);
+                Bloon bloonScript = bloon.GetComponent<Bloon>();
+
+                if (bloonScript != null)
+                {
+                    bloonScript.SetPath(path, 0);
+                    bloonScript.speed = group.bloonPrefab.GetComponent<Bloon>().speed;
+                    bloonScript.isClone = true;
+                }
+
                 yield return new WaitForSeconds(group.delayBetween);
             }
         }

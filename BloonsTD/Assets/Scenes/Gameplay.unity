@@ -677,7 +677,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -747,7 +747,7 @@ Transform:
   m_GameObject: {fileID: 86211295}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.059998, y: -19.45, z: 0}
+  m_LocalPosition: {x: 8.239998, y: 2.3862953, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -769,6 +769,7 @@ MonoBehaviour:
   path: []
   weakerBloonPrefab: {fileID: 896501112}
   Health: 1
+  isClone: 0
 --- !u!1 &135380404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1771,7 +1772,7 @@ Transform:
   m_GameObject: {fileID: 428710423}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.4463344, y: -1.1317921, z: 0.05433797}
+  m_LocalPosition: {x: -5.5536656, y: -0.13179207, z: 0.05433797}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1790,7 +1791,7 @@ Transform:
   - {fileID: 52386838}
   - {fileID: 1198058202}
   - {fileID: 249952825}
-  m_Father: {fileID: 758484123}
+  m_Father: {fileID: 1314744548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &440817504
 GameObject:
@@ -3839,11 +3840,10 @@ Transform:
   m_GameObject: {fileID: 758484122}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 1, z: 0}
+  m_LocalPosition: {x: -9, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 428710425}
+  m_Children: []
   m_Father: {fileID: 1314744548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &759043177
@@ -4327,7 +4327,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -4397,7 +4397,7 @@ Transform:
   m_GameObject: {fileID: 861859244}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.52, y: -17.79, z: 0}
+  m_LocalPosition: {x: 8.700001, y: 4.046295, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4419,6 +4419,7 @@ MonoBehaviour:
   path: []
   weakerBloonPrefab: {fileID: 86211295}
   Health: 1
+  isClone: 0
 --- !u!1 &865469522
 GameObject:
   m_ObjectHideFlags: 0
@@ -4722,7 +4723,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -4792,7 +4793,7 @@ Transform:
   m_GameObject: {fileID: 896501112}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.42, y: -19.130001, z: 0}
+  m_LocalPosition: {x: 9.599998, y: 2.706295, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4814,6 +4815,7 @@ MonoBehaviour:
   path: []
   weakerBloonPrefab: {fileID: 0}
   Health: 1
+  isClone: 0
 --- !u!1 &906188562
 GameObject:
   m_ObjectHideFlags: 0
@@ -5297,7 +5299,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -5367,7 +5369,7 @@ Transform:
   m_GameObject: {fileID: 980623364}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.37, y: -18.726295, z: 0}
+  m_LocalPosition: {x: 7.55, y: 3.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5389,6 +5391,7 @@ MonoBehaviour:
   path: []
   weakerBloonPrefab: {fileID: 861859244}
   Health: 1
+  isClone: 0
 --- !u!1 &985827008
 GameObject:
   m_ObjectHideFlags: 0
@@ -6716,17 +6719,17 @@ MonoBehaviour:
     - bloonPrefab: {fileID: 861859244}
       count: 5
       delayBetween: 2
-    - bloonPrefab: {fileID: 896501112}
+    - bloonPrefab: {fileID: 86211295}
       count: 5
       delayBetween: 0.5
   - bloonGroups:
     - bloonPrefab: {fileID: 861859244}
       count: 5
       delayBetween: 2
-    - bloonPrefab: {fileID: 896501112}
+    - bloonPrefab: {fileID: 86211295}
       count: 5
       delayBetween: 2
-    - bloonPrefab: {fileID: 86211295}
+    - bloonPrefab: {fileID: 896501112}
       count: 5
       delayBetween: 2
   - bloonGroups:
@@ -6753,6 +6756,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 428710425}
   - {fileID: 758484123}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9677,7 +9681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d8dc375d03a9f42bad1aa722130add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Round: {fileID: 440817506}
+  RoundVar: {fileID: 440817506}
   Money: {fileID: 1873911595}
   Lives: {fileID: 1318245642}
   InfoBox: {fileID: 1944023282}
@@ -9712,6 +9716,7 @@ MonoBehaviour:
   Desc: {fileID: 668140474}
   waveManager: {fileID: 1314744547}
   startRoundButton: {fileID: 985827008}
+  Rounds: 0
 --- !u!114 &1950568729
 MonoBehaviour:
   m_ObjectHideFlags: 0

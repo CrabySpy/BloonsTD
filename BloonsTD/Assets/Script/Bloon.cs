@@ -6,8 +6,8 @@ public class Bloon : MonoBehaviour
     public Transform[] path;
     public GameObject weakerBloonPrefab;
     public int Health = 1;
-
     private int waypointIndex = 0;
+    public bool isClone = false;
 
     void Update()
     {
@@ -32,6 +32,8 @@ public class Bloon : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (!isClone) return; // prevents balloons that are just sitting in the game (like the gameobjects) from being popped
+
         Health -= damage;
 
         if (Health <= 0)
@@ -39,6 +41,7 @@ public class Bloon : MonoBehaviour
             Pop();
         }
     }
+
 
     public void SetPath(Transform[] waypoints, int startIndex = 0)
     {
@@ -48,18 +51,18 @@ public class Bloon : MonoBehaviour
 
     void Pop()
     {
-        // Spawn weaker bloon, if one exists
-        if (weakerBloonPrefab != null)
-        {
-            GameObject newBloon = Instantiate(weakerBloonPrefab, transform.position, Quaternion.identity);
-            Bloon newBloonScript = newBloon.GetComponent<Bloon>();
+    if (weakerBloonPrefab != null) {
+        GameObject newBloon = Instantiate(weakerBloonPrefab, transform.position, Quaternion.identity);
+        Bloon newBloonScript = newBloon.GetComponent<Bloon>();
 
-            if (newBloonScript != null)
-            {
-                newBloonScript.SetPath(path, waypointIndex);
-                newBloonScript.speed = speed; // optional: inherit speed
-            }
+        if (newBloonScript != null)
+        {
+            newBloonScript.SetPath(path, waypointIndex);
+            newBloonScript.speed = speed;
+            newBloonScript.isClone = true;
         }
+    }
+
 
         // Play pop sound if assigned
         AudioSource audio = GetComponent<AudioSource>();
