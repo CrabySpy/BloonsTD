@@ -504,6 +504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dart
       objectReference: {fileID: 0}
+    - target: {fileID: 8028708306941089383, guid: f8d8897b8b11cbb45938ce8143639c45, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -743,7 +747,7 @@ Transform:
   m_GameObject: {fileID: 86211295}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.74, y: -0.74, z: 0}
+  m_LocalPosition: {x: 36.059998, y: -19.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -761,9 +765,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b5d4f153b3df548bd3d6cad867ea83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   path: []
-  weakerBloonPrefab: {fileID: 0}
+  weakerBloonPrefab: {fileID: 896501112}
   Health: 1
 --- !u!1 &135380404
 GameObject:
@@ -4393,7 +4397,7 @@ Transform:
   m_GameObject: {fileID: 861859244}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.28, y: 0.92, z: 0}
+  m_LocalPosition: {x: 36.52, y: -17.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4411,9 +4415,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b5d4f153b3df548bd3d6cad867ea83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
   path: []
-  weakerBloonPrefab: {fileID: 0}
+  weakerBloonPrefab: {fileID: 86211295}
   Health: 1
 --- !u!1 &865469522
 GameObject:
@@ -4788,7 +4792,7 @@ Transform:
   m_GameObject: {fileID: 896501112}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.38, y: -0.42, z: 0}
+  m_LocalPosition: {x: 37.42, y: -19.130001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5363,7 +5367,7 @@ Transform:
   m_GameObject: {fileID: 980623364}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.43, y: -0.016294003, z: 0}
+  m_LocalPosition: {x: 35.37, y: -18.726295, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5381,9 +5385,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b5d4f153b3df548bd3d6cad867ea83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 4
   path: []
-  weakerBloonPrefab: {fileID: 0}
+  weakerBloonPrefab: {fileID: 861859244}
   Health: 1
 --- !u!1 &985827008
 GameObject:
@@ -6673,13 +6677,69 @@ MonoBehaviour:
   waves:
   - bloonGroups:
     - bloonPrefab: {fileID: 896501112}
-      count: 10
-      delayBetween: 0.5
+      count: 3
+      delayBetween: 2
   - bloonGroups:
     - bloonPrefab: {fileID: 896501112}
-      count: 15
+      count: 5
+      delayBetween: 2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 86211295}
+      count: 3
+      delayBetween: 2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 86211295}
+      count: 3
+      delayBetween: 1
+    - bloonPrefab: {fileID: 896501112}
+      count: 3
+      delayBetween: 1
+  - bloonGroups:
+    - bloonPrefab: {fileID: 86211295}
+      count: 5
+      delayBetween: 1
+    - bloonPrefab: {fileID: 896501112}
+      count: 5
+      delayBetween: 1
+  - bloonGroups:
+    - bloonPrefab: {fileID: 861859244}
+      count: 5
+      delayBetween: 2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 861859244}
+      count: 3
+      delayBetween: 2
+    - bloonPrefab: {fileID: 896501112}
+      count: 3
+      delayBetween: 2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 861859244}
+      count: 5
+      delayBetween: 2
+    - bloonPrefab: {fileID: 896501112}
+      count: 5
       delayBetween: 0.5
-  delayBetweenWaves: 3
+  - bloonGroups:
+    - bloonPrefab: {fileID: 861859244}
+      count: 5
+      delayBetween: 2
+    - bloonPrefab: {fileID: 896501112}
+      count: 5
+      delayBetween: 2
+    - bloonPrefab: {fileID: 86211295}
+      count: 5
+      delayBetween: 2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 861859244}
+      count: 7
+      delayBetween: 2
+    - bloonPrefab: {fileID: 86211295}
+      count: 7
+      delayBetween: 1
+    - bloonPrefab: {fileID: 896501112}
+      count: 7
+      delayBetween: 0.5
+  delayBetweenWaves: 5
 --- !u!4 &1314744548
 Transform:
   m_ObjectHideFlags: 0

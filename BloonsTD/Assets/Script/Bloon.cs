@@ -25,6 +25,9 @@ public class Bloon : MonoBehaviour
         {
             waypointIndex++;
         }
+
+        // Clamp to Z = 0 so they don’t fall below map
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
     }
 
     public void TakeDamage(int damage)
@@ -37,9 +40,10 @@ public class Bloon : MonoBehaviour
         }
     }
 
-    public void SetPath(Transform[] waypoints)
+    public void SetPath(Transform[] waypoints, int startIndex = 0)
     {
         path = waypoints;
+        waypointIndex = startIndex;
     }
 
     void Pop()
@@ -52,7 +56,8 @@ public class Bloon : MonoBehaviour
 
             if (newBloonScript != null)
             {
-                newBloonScript.SetPath(path);
+                newBloonScript.SetPath(path, waypointIndex);
+                newBloonScript.speed = speed; // optional: inherit speed
             }
         }
 
