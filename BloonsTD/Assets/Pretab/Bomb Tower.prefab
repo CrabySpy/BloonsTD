@@ -196,9 +196,9 @@ MonoBehaviour:
   rotationalPoint: {fileID: 1680281957419986252}
   bloonsMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   firePoint: {fileID: 6186504294725011817}
-  rangeCircle: {fileID: 6894067079561312320}
+  targetingMode: 2
   ProjectilePrefab: {fileID: 1529712673892602174, guid: 48f9aa1e84682224593404cb1d2be788, type: 3}
   projectileSpeed: 10
 --- !u!61 &8676606477389227760
@@ -325,7 +325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9125310118021851535
 Transform:
   m_ObjectHideFlags: 0
@@ -335,9 +335,9 @@ Transform:
   m_GameObject: {fileID: 6894067079561312320}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0046867533, y: -0.008914253, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7862354167414027149}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

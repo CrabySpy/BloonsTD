@@ -10,6 +10,9 @@ public class Bloon : MonoBehaviour
     public bool isClone = false;
     public ShopScript ShopScript;
 
+    public float Progress { get; private set; }
+
+
     void Update()
     {
         Move();
@@ -20,14 +23,20 @@ public class Bloon : MonoBehaviour
         if (waypointIndex >= path.Length) return;
 
         Transform target = path[waypointIndex];
+        Vector3 prevPos = transform.position;
+
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+
+        // Update progress based on distance moved
+        float distanceMoved = Vector2.Distance(prevPos, transform.position);
+        Progress += distanceMoved;
 
         if (Vector2.Distance(transform.position, target.position) < 0.1f)
         {
             waypointIndex++;
         }
 
-        // Clamp to Z = 0 so they don’t fall below map
+        // Clamp Z
         transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
     }
 

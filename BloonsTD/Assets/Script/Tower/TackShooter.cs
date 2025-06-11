@@ -5,9 +5,8 @@ public class TackShooter : Tower
 {
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float projectileSpeed = 10f;
-
-    protected override void RotateTowardsMouse() {}
-
+    
+    protected override void RotateTowardsTarget(Bloon target) { }
     
     public override void Attack()
     {

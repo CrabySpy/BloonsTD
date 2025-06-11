@@ -107,9 +107,9 @@ MonoBehaviour:
   rotationalPoint: {fileID: 10232073320735833}
   bloonsMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   firePoint: {fileID: 10232073320735833}
-  rangeCircle: {fileID: 5592852746489973722}
+  targetingMode: 2
   projectilePrefab: {fileID: 6618622851848156474, guid: 5ee4487150014304dbe71d43e25d3fe2, type: 3}
   projectileSpeed: 5
 --- !u!61 &157218918022565865
