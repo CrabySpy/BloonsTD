@@ -6603,12 +6603,37 @@ MonoBehaviour:
   waves:
   - bloonGroups:
     - bloonPrefab: {fileID: 896501112}
-      count: 10
+      count: 12
       delayBetween: 0.4
   - bloonGroups:
     - bloonPrefab: {fileID: 896501112}
-      count: 2000
-      delayBetween: 0.1
+      count: 30
+      delayBetween: 0.3
+  - bloonGroups:
+    - bloonPrefab: {fileID: 896501112}
+      count: 10
+      delayBetween: 0.3
+    - bloonPrefab: {fileID: 86211295}
+      count: 5
+      delayBetween: 0.7
+  - bloonGroups:
+    - bloonPrefab: {fileID: 86211295}
+      count: 15
+      delayBetween: 0.7
+    - bloonPrefab: {fileID: 896501112}
+      count: 10
+      delayBetween: 0.3
+  - bloonGroups:
+    - bloonPrefab: {fileID: 86211295}
+      count: 30
+      delayBetween: 0.2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 86211295}
+      count: 10
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 861859244}
+      count: 10
+      delayBetween: 0.2
   delayBetweenWaves: 5
 --- !u!4 &1314744548
 Transform:
