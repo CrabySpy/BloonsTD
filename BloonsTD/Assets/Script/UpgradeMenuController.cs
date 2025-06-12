@@ -33,7 +33,7 @@ public class UpgradeMenuController : MonoBehaviour
     {
         TowerInfo info = tower.towerInfo;
         SelectedTower = tower;
-
+        // ChatGPT used
         towerNameText.text = info.Name;
         speedText.text = info.SpeedString;
         rangeText.text = info.Range.ToString();

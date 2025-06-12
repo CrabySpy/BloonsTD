@@ -25,6 +25,8 @@ public class SwitchTargetingButton : MonoBehaviour
         if (sr != null)
             sr.color = originalColor;
     }
+
+    // ChatGPT used
     private void OnMouseDown()
     {
         Debug.Log("Mouse Down on Switch Button");

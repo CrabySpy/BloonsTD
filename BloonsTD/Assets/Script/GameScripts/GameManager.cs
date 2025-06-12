@@ -205,10 +205,6 @@ public class GameManager : MonoBehaviour
         selectedTower = tower;
         upgradeMenuPanel.SetActive(true);
 
-        // Position the menu near the tower or mouse position if you want
-
-
-        // You can also update upgrade menu UI info here (e.g., tower level, upgrade cost)
     }
 
     public void HideUpgradeMenu()

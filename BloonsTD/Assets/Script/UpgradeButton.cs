@@ -41,6 +41,7 @@ public class UpgradeButton : MonoBehaviour
         Tower selectedTower = UpgradeMenuController.Instance.GetSelectedTower();
         TowerInfo info = selectedTower.towerInfo;
 
+        // ChatGPT used
         if (selectedTower != null)
         {
             if (upgradeIndex == 0 && shopScript.MoneyVar >= info.Upgrade1Cost) 
