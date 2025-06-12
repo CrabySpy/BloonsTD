@@ -11,15 +11,21 @@ public class Projectile : MonoBehaviour
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.CompareTag("PowerUp"))
     {
-        Bloon bloon = other.GetComponent<Bloon>();
-        if (bloon != null)
-        {
-            bloon.TakeDamage(damage);
-            Destroy(gameObject);
-            Debug.Log("Projectile hit a bloon: " + bloon.name);
-        }
+        other.GetComponent<PowerUpCrate>().ActivatePowerUp();
+        Destroy(gameObject);
     }
+
+    if (other.CompareTag("Bloon"))
+    {
+        other.GetComponent<Bloon>().TakeDamage(1);
+        Destroy(gameObject);
+    }
+
+}
+
 
     public void OnBecameInvisible()
     {

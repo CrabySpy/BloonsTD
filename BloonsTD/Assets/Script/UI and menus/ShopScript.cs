@@ -110,7 +110,7 @@ public class ShopScript : MonoBehaviour
         }
     }
 
-    void UpdateText()
+    public void UpdateText()
     {
         RoundVar.text = gameManager.player.Rounds.ToString();
         Money.text = gameManager.player.Money.ToString();
