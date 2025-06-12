@@ -9,6 +9,9 @@ public class PauseMenuScript : MonoBehaviour
     public GameObject BacktoMainMenu;
     private BoxCollider2D backToMainMenuCollider;
 
+    public GameObject ResetGame;
+    private BoxCollider2D resetGameCollider;
+
     public GameObject MuteMusic;
     private BoxCollider2D muteMusicCollider;
     public GameObject MuteMusicHider;
@@ -25,6 +28,7 @@ public class PauseMenuScript : MonoBehaviour
         backToMainMenuCollider = BacktoMainMenu.GetComponent<BoxCollider2D>();
         muteMusicCollider = MuteMusic.GetComponent<BoxCollider2D>();
         muteSoundCollider = MuteSound.GetComponent<BoxCollider2D>();
+        resetGameCollider = ResetGame.GetComponent<BoxCollider2D>();
         if (Audio.MuteMusic == true)
         {
             MuteMusicHider.SetActive(false);
@@ -59,6 +63,17 @@ public class PauseMenuScript : MonoBehaviour
             if (backToMainMenuCollider == Physics2D.OverlapPoint(worldPoint))
             {
                 SceneManager.LoadScene("MainMenu");
+            }
+        }
+
+        //Reset game button
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            if (resetGameCollider == Physics2D.OverlapPoint(worldPoint))
+            {
+                SceneManager.LoadScene("Gameplay");
             }
         }
 
