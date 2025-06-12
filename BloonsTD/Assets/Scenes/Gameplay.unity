@@ -8035,6 +8035,122 @@ MonoBehaviour:
     - bloonPrefab: {fileID: 861859244}
       count: 10
       delayBetween: 0.2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 86211295}
+      count: 20
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 861859244}
+      count: 20
+      delayBetween: 0.2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 861859244}
+      count: 20
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 980623364}
+      count: 10
+      delayBetween: 0.2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 861859244}
+      count: 20
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 980623364}
+      count: 30
+      delayBetween: 0.2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 861859244}
+      count: 20
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 980623364}
+      count: 30
+      delayBetween: 0.2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 980623364}
+      count: 40
+      delayBetween: 0.2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 980623364}
+      count: 50
+      delayBetween: 0.2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 980623364}
+      count: 20
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 86211295}
+      count: 50
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 980623364}
+      count: 30
+      delayBetween: 0.2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 980623364}
+      count: 20
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 86211295}
+      count: 50
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 980623364}
+      count: 30
+      delayBetween: 0.2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 980623364}
+      count: 10
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 861859244}
+      count: 40
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 86211295}
+      count: 20
+      delayBetween: 0.2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 980623364}
+      count: 10
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 861859244}
+      count: 40
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 86211295}
+      count: 20
+      delayBetween: 0.2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 980623364}
+      count: 10
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 861859244}
+      count: 40
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 86211295}
+      count: 20
+      delayBetween: 0.2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 980623364}
+      count: 10
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 861859244}
+      count: 40
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 86211295}
+      count: 20
+      delayBetween: 0.2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 980623364}
+      count: 10
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 861859244}
+      count: 40
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 86211295}
+      count: 20
+      delayBetween: 0.2
+  - bloonGroups:
+    - bloonPrefab: {fileID: 980623364}
+      count: 10
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 861859244}
+      count: 40
+      delayBetween: 0.2
+    - bloonPrefab: {fileID: 86211295}
+      count: 20
+      delayBetween: 0.2
   delayBetweenWaves: 5
 --- !u!4 &1314744548
 Transform:
