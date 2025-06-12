@@ -3,10 +3,10 @@ using UnityEngine;
 
 public enum TargetingMode
 {
-   Closest,
-   Farthest,
    First,
-   Strongest
+   Strongest,
+   Closest,
+   Farthest
 }
 
 public static class TargetingSystem

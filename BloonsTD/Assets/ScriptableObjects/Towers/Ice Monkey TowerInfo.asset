@@ -16,6 +16,10 @@ MonoBehaviour:
   Cost: 850
   Speed: 0
   Range: 1.2
+  Upgrade1Name: Long Freeze Time
+  Upgrade1Cost: 450
+  Upgrade2Name: Wide Freeze Radius
+  Upgrade2Cost: 300
   Description: Freezes nearby bloons. Frozen bloons are immune to darts and tacks,
     but bombs will destroy them. Can upgrade to increased freeze time, and larger
     freeze radius.

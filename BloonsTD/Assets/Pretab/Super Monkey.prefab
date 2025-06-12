@@ -220,7 +220,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   firePoint: {fileID: 8426175997679792719}
-  targetingMode: 2
+  targetingMode: 0
   ProjectilePrefab: {fileID: 4842393175271889557, guid: f8d8897b8b11cbb45938ce8143639c45, type: 3}
   projectileSpeed: 10
 --- !u!61 &5225877732137354310

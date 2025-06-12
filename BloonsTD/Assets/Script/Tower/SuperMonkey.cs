@@ -19,7 +19,7 @@ public class SuperMonkey : Tower
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.linearVelocity = firePoint.right * projectileSpeed; // Right assumes your dart faces right
+            rb.linearVelocity = firePoint.right * projectileSpeed;
         }
     }
 }

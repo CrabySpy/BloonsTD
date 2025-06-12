@@ -251,7 +251,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   firePoint: {fileID: 4694508126830653916}
-  targetingMode: 2
+  targetingMode: 0
   dartPrefab: {fileID: 4842393175271889557, guid: f8d8897b8b11cbb45938ce8143639c45, type: 3}
   projectileSpeed: 10
 --- !u!61 &-7681469157264550155

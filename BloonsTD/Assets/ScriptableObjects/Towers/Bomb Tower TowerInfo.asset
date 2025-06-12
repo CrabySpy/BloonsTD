@@ -16,5 +16,9 @@ MonoBehaviour:
   Cost: 900
   Speed: 0
   Range: 2
+  Upgrade1Name: Bigger Bombs
+  Upgrade1Cost: 650
+  Upgrade2Name: Extra Range Bombs
+  Upgrade2Cost: 250
   Description: Launches a bomb that explodes on impact. Can upgrade to bigger bombs
     and longer range.

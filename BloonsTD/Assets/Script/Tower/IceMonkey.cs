@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class IceMonkey : Tower
 {
-    [SerializeField] private float slowAmount = 0.5f; // 50% speed
+    [SerializeField] private float slowAmount = 0.5f;
     [SerializeField] private float slowDuration = 2f;
     [SerializeField] private int damage = 1;
 
@@ -23,10 +23,7 @@ public class IceMonkey : Tower
         }
     }
 
-    protected override void RotateTowardsTarget(Bloon target)
-    {
-        // Ice Monkey doesn't rotate, but override required
-    }
+    protected override void RotateTowardsTarget(Bloon target){}
 
     private IEnumerator ApplySlow(Bloon bloon)
     {

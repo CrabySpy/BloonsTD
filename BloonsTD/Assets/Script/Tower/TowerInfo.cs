@@ -17,10 +17,15 @@ public class TowerInfo : ScriptableObject
     public TowerSpeed Speed;
     public float Range;
 
-    //public List<UpgradeInfo> Upgrades;
-    // [SerializeField] private Tower
+    public string Upgrade1Name;
+    public int Upgrade1Cost;
+
+    public string Upgrade2Name;
+    public int Upgrade2Cost;
+
     [TextArea]public string Description;
-    
+
+
     public string SpeedString
     {
         get
@@ -31,7 +36,7 @@ public class TowerInfo : ScriptableObject
                 case TowerSpeed.Medium: return "Medium";
                 case TowerSpeed.Fast: return "Fast";
                 case TowerSpeed.Hyperonic: return "Hyperonic";
-                default: return "Unknown";
+                default: return "Medium";
             }
         }
     }
