@@ -2,6 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -205,7 +206,7 @@ public class GameManager : MonoBehaviour
         upgradeMenuPanel.SetActive(true);
 
         // Position the menu near the tower or mouse position if you want
-        
+
 
         // You can also update upgrade menu UI info here (e.g., tower level, upgrade cost)
     }
