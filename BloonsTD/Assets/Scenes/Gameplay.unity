@@ -4419,7 +4419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &720771942
 Transform:
   m_ObjectHideFlags: 0
@@ -7127,7 +7127,7 @@ GameObject:
   - component: {fileID: 1129651140}
   - component: {fileID: 1129651141}
   m_Layer: 0
-  m_Name: SellBG
+  m_Name: Target Mode Buttton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9454,6 +9454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomb
       objectReference: {fileID: 0}
+    - target: {fileID: 6132104086193112719, guid: 48f9aa1e84682224593404cb1d2be788, type: 3}
+      propertyPath: explosionEffectPrefab
+      value: 
+      objectReference: {fileID: 1181118422}
     - target: {fileID: 7348703556906271846, guid: 48f9aa1e84682224593404cb1d2be788, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.07
@@ -9494,14 +9498,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6656617887338073896, guid: 48f9aa1e84682224593404cb1d2be788, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1529712673892602174, guid: 48f9aa1e84682224593404cb1d2be788, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1832256751}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48f9aa1e84682224593404cb1d2be788, type: 3}
 --- !u!1 &1499602431
 GameObject:
@@ -10396,11 +10396,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7862354167414027149, guid: 992692a3b531b324eb3d0f5553f32492, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.98
+      value: -4.59
       objectReference: {fileID: 0}
     - target: {fileID: 7862354167414027149, guid: 992692a3b531b324eb3d0f5553f32492, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.08
+      value: -0.82
       objectReference: {fileID: 0}
     - target: {fileID: 7862354167414027149, guid: 992692a3b531b324eb3d0f5553f32492, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10808,31 +10808,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1832256745 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1529712673892602174, guid: 48f9aa1e84682224593404cb1d2be788, type: 3}
-  m_PrefabInstance: {fileID: 1486114163}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1832256751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832256745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6bab5465109757419b517c922112c14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  spawnPosition: {x: 0, y: 0, z: 0}
-  explosionRadius: 2
-  explosionDamage: 1
-  bloonLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  explosionEffectPrefab: {fileID: 1181118422}
 --- !u!1 &1836743598
 GameObject:
   m_ObjectHideFlags: 0

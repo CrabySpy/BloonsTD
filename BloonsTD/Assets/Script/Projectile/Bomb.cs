@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Bomb : Projectile
 {
-    [SerializeField] private float explosionRadius = 2f;
+    [SerializeField] private float explosionRadius = 0.4f;
     [SerializeField] private int explosionDamage = 1;
     [SerializeField] private LayerMask bloonLayer;
     [SerializeField] private GameObject explosionEffectPrefab;
@@ -26,8 +26,10 @@ public class Bomb : Projectile
 
         if (explosionEffectPrefab != null)
         {
-            Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
+            GameObject effect = Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
+            Destroy(effect, 0.23f);
         }
+    
 
         Destroy(gameObject);
     }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7924723893289155332}
   - component: {fileID: 7060486329823110597}
   - component: {fileID: 1255694042612925158}
-  - component: {fileID: 6656617887338073896}
+  - component: {fileID: 6132104086193112719}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -163,7 +163,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6656617887338073896
+--- !u!114 &6132104086193112719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,7 +172,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1529712673892602174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8d684423b29521488c6024d2c50b1bf, type: 3}
+  m_Script: {fileID: 11500000, guid: c6bab5465109757419b517c922112c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  spawnPosition: {x: 0, y: 0, z: 0}
+  explosionRadius: 1
+  explosionDamage: 1
+  bloonLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  explosionEffectPrefab: {fileID: 2754930653447852233, guid: a8d7324f789f3a846933d65dafa0c1e6, type: 3}
