@@ -18,8 +18,11 @@ public abstract class Tower : MonoBehaviour
     protected Animator animator;
     private bool isAttacking = false;
     protected string ATTACK_STRING = "Attack";
+    
+    protected bool[] upgrades = new bool[2];
 
     [SerializeField] private TargetingMode targetingMode = TargetingMode.First;
+    private Bloon currentTarget;
 
     private void Awake()
     {
@@ -62,16 +65,16 @@ public abstract class Tower : MonoBehaviour
 
     protected void Update()
     {
-        List<Bloon> bloonsInRange = GetBloonsInRange();
-        Bloon target = TargetingSystem.GetTarget(bloonsInRange, transform, targetingMode);
+        attackCooldown -= Time.deltaTime;
 
-        if (target != null)
+        if (attackCooldown <= 0f)
         {
-            RotateTowardsTarget(target);
+            UpdateTarget();
 
-            attackCooldown -= Time.deltaTime;
-            if (attackCooldown <= 0f)
+            if (currentTarget != null)
             {
+                RotateTowardsTarget(currentTarget);
+
                 if (animator != null)
                 {
                     isAttacking = true;
@@ -79,22 +82,29 @@ public abstract class Tower : MonoBehaviour
                 }
 
                 Attack();
-                attackCooldown = attackInterval;
             }
-        }
-        else
-        {
-            if (isAttacking && animator != null)
+            else
             {
-                isAttacking = false;
-                animator.SetBool(ATTACK_STRING, isAttacking);
+                if (isAttacking && animator != null)
+                {
+                    isAttacking = false;
+                    animator.SetBool(ATTACK_STRING, isAttacking);
+                }
             }
+
+            attackCooldown = attackInterval;
         }
 
         if (rangeCircle != null)
         {
             rangeCircle.transform.position = transform.position;
         }
+    }
+
+    private void UpdateTarget()
+    {
+        List<Bloon> bloonsInRange = GetBloonsInRange();
+        currentTarget = TargetingSystem.GetTarget(bloonsInRange, transform, targetingMode);
     }
 
     private List<Bloon> GetBloonsInRange()
@@ -114,7 +124,6 @@ public abstract class Tower : MonoBehaviour
         return bloons;
     }
 
-    
     protected virtual void RotateTowardsTarget(Bloon target)
     {
         if (rotationalPoint == null || target == null) return;
@@ -129,14 +138,19 @@ public abstract class Tower : MonoBehaviour
         if (currentlySelectedTower != this)
         {
             if (currentlySelectedTower != null)
+            {
                 currentlySelectedTower.HideRange();
+                UpgradeMenuController.Instance.HideMenu();
+            }
 
             currentlySelectedTower = this;
             ShowRange();
+            UpgradeMenuController.Instance.ShowMenu(this);
         }
         else
         {
             HideRange();
+            UpgradeMenuController.Instance.HideMenu();
             currentlySelectedTower = null;
         }
     }
@@ -153,14 +167,45 @@ public abstract class Tower : MonoBehaviour
             rangeCircle.SetActive(false);
     }
 
-    private void OnDrawGizmos()
+    public string GetTargetingModeName()
     {
-        if (towerInfo != null)
+        switch (targetingMode)
         {
-            Handles.color = Color.white;
-            Handles.DrawWireDisc(transform.position, Vector3.forward, towerInfo.Range);
+            case TargetingMode.First: return "First";
+            case TargetingMode.Strongest: return "Strongest";
+            case TargetingMode.Farthest: return "Farthest";
+            case TargetingMode.Closest: return "Closest";
+            default: return "Unknown";
         }
     }
+
+    public void ApplyUpgrade(int upgradeIndex)
+    {
+        if (upgradeIndex < 0 || upgradeIndex >= upgrades.Length) return;
+        if (upgrades[upgradeIndex]) return; // Already applied
+
+        upgrades[upgradeIndex] = true;
+
+        switch (upgradeIndex)
+        {
+            case 0: 
+                if (attackInterval > 0.2f)
+                    attackInterval *= 0.7f; 
+                break;
+            case 1: // Longer Range
+                towerInfo.Range += 1.5f;
+                break;
+        }
+
+        Debug.Log($"Applied upgrade {upgradeIndex} to {gameObject.name}");
+    }
+
+    public void CycleTargetingMode()
+    {
+        targetingMode = (TargetingMode)(((int)targetingMode + 1) % System.Enum.GetValues(typeof(TargetingMode)).Length);
+        UpgradeMenuController.Instance.UpdateTargetingModeText(GetTargetingModeName());
+    }
+
 
     public abstract void Attack();
 }

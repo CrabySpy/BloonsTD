@@ -16,5 +16,9 @@ MonoBehaviour:
   Cost: 400
   Speed: 1
   Range: 1
+  Upgrade1Name: Faster Shooting
+  Upgrade1Cost: 250
+  Upgrade2Name: Extra Range Darts
+  Upgrade2Cost: 150
   Description: Shoots volley of tacks in 8 directions. Can upgrade its shoot speed
     and its range.

@@ -16,5 +16,9 @@ MonoBehaviour:
   Cost: 250
   Speed: 2
   Range: 2.5
+  Upgrade1Name: Faster Shooting
+  Upgrade1Cost: 200
+  Upgrade2Name: Longer Range
+  Upgrade2Cost: 300
   Description: Shoots a single dart. Can upgrade to piercing darts and long range
     darts.
