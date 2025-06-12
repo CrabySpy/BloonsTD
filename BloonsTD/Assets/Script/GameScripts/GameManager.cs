@@ -24,6 +24,11 @@ public class GameManager : MonoBehaviour
     public GameObject pretabIce;
     public GameObject pretabBomb;
     public GameObject pretabSuper;
+
+
+
+    public GameObject upgradeMenuPanel;
+    private Tower selectedTower;
     void Awake()
     {
         player = new GameData(0, 650, 40);
@@ -31,6 +36,7 @@ public class GameManager : MonoBehaviour
         pauseMenuActive = GameObject.Find("Pause Menu Button").GetComponent<PauseMenuButton>();
         mapPlacementCollider = ValidPlacementDetector.GetComponent<PolygonCollider2D>();
         reset = new Vector2(1000f, 1000f);
+        upgradeMenuPanel.SetActive(false);
     }
 
     void Update()
@@ -73,7 +79,7 @@ public class GameManager : MonoBehaviour
 
             Collider2D clickedCollider = Physics2D.OverlapPoint(worldPoint);
 
-            if ((clickedCollider.transform.IsChildOf(ValidPlacementDetector.transform)) && iconActive == true)
+            if (clickedCollider != null && clickedCollider.transform.IsChildOf(ValidPlacementDetector.transform) && iconActive == true)
             {
                 Debug.Log("Clicked valid area");
                 if (activeIcon == "DartMonkey" && shopScript.MoneyVar >= 250)
@@ -191,5 +197,33 @@ public class GameManager : MonoBehaviour
         BombTowerSprite.transform.position = reset;
         SuperMonkeySprite.transform.position = reset;
 
+    }
+
+    public void ShowUpgradeMenu(Tower tower)
+    {
+        selectedTower = tower;
+        upgradeMenuPanel.SetActive(true);
+
+        // Position the menu near the tower or mouse position if you want
+        Vector3 screenPos = Camera.main.WorldToScreenPoint(tower.transform.position);
+        upgradeMenuPanel.transform.position = screenPos;
+
+        // You can also update upgrade menu UI info here (e.g., tower level, upgrade cost)
+    }
+
+    public void HideUpgradeMenu()
+    {
+        upgradeMenuPanel.SetActive(false);
+        selectedTower = null;
+    }
+
+    public void UpgradeSelectedTower()
+    {
+        if (selectedTower == null) return;
+
+        // Implement your upgrade logic here
+        // e.g., increase damage, decrease cooldown, etc.
+
+        HideUpgradeMenu();
     }
 }
