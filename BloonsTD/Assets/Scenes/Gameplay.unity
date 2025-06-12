@@ -1282,7 +1282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &302432358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1295,6 +1295,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 216315fdbf3fa2745b52e691a598400f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LoseScreen: {fileID: 302432357}
+  RestartButton: {fileID: 1206702585}
+  BackToMainMenuButton2: {fileID: 1564652069}
 --- !u!4 &302432359
 Transform:
   m_ObjectHideFlags: 0
