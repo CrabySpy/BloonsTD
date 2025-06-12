@@ -317,6 +317,9 @@ MonoBehaviour:
     m_Bits: 128
   firePoint: {fileID: 3426728304477157717}
   targetingMode: 2
+  slowAmount: 0.5
+  slowDuration: 1
+  fireCooldown: 1
 --- !u!61 &2377743360495748321
 BoxCollider2D:
   m_ObjectHideFlags: 0

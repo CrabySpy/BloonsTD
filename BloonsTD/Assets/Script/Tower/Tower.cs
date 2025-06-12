@@ -6,7 +6,7 @@ public abstract class Tower : MonoBehaviour
 {
     public TowerInfo towerInfo;
     [SerializeField] private Transform rotationalPoint;
-    [SerializeField] private LayerMask bloonsMask;
+    [SerializeField] protected LayerMask bloonsMask;
     [SerializeField] protected Transform firePoint;
 
     private GameObject rangeCircle;
