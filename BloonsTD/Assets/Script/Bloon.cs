@@ -70,7 +70,6 @@ public class Bloon : MonoBehaviour
             if (newBloonScript != null)
             {
                 newBloonScript.SetPath(path, waypointIndex);
-                newBloonScript.speed = speed;
                 newBloonScript.isClone = true;
                 newBloonScript.ShopScript = this.ShopScript;
             }
