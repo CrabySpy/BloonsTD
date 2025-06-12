@@ -205,8 +205,7 @@ public class GameManager : MonoBehaviour
         upgradeMenuPanel.SetActive(true);
 
         // Position the menu near the tower or mouse position if you want
-        Vector3 screenPos = Camera.main.WorldToScreenPoint(tower.transform.position);
-        upgradeMenuPanel.transform.position = screenPos;
+        
 
         // You can also update upgrade menu UI info here (e.g., tower level, upgrade cost)
     }
