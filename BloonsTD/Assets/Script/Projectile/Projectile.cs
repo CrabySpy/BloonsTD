@@ -14,27 +14,30 @@ public class Projectile : MonoBehaviour
     {
         if (other.CompareTag("PowerUp"))
         {
-            other.GetComponent<PowerUpCrate>().ActivatePowerUp();
+            PowerUpCrate crate = other.GetComponent<PowerUpCrate>();
+            if (crate != null)
+            {
+                crate.ActivatePowerUp();
+            }
+
             Destroy(gameObject);
+            return;
         }
 
         if (other.CompareTag("Bloon"))
         {
-            other.GetComponent<Bloon>().TakeDamage(1);
+            Bloon bloon = other.GetComponent<Bloon>();
+            if (bloon != null)
+            {
+                bloon.TakeDamage(damage);
+            }
+
             Destroy(gameObject);
+            return;
         }
 
-        Bloon bloon = other.GetComponent<Bloon>();
-        if (bloon != null)
-        {
-            bloon.TakeDamage(damage);
-            Destroy(gameObject);
-            Debug.Log("Projectile hit a bloon: " + bloon.name);
-        }
-
+        Destroy(gameObject);
     }
-    
-
 
     public void OnBecameInvisible()
     {

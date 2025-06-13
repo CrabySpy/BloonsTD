@@ -112,10 +112,23 @@ public class ShopScript : MonoBehaviour
 
     public void UpdateText()
     {
-        RoundVar.text = gameManager.player.Rounds.ToString();
-        Money.text = gameManager.player.Money.ToString();
-        Lives.text = gameManager.player.Lives.ToString();
+        if (gameManager != null && gameManager.player != null)
+        {
+            if (RoundVar != null)
+                RoundVar.text = gameManager.player.Rounds.ToString();
+
+            if (Money != null)
+                Money.text = gameManager.player.Money.ToString();
+
+            if (Lives != null)
+                Lives.text = LivesVar.ToString();
+        }
+        else
+        {
+            Debug.LogWarning("ShopScript: gameManager or player is null");
+        }
     }
+
 
     void Update()
     {

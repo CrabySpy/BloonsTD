@@ -6,7 +6,7 @@ public class PowerUpManager : MonoBehaviour
     public GameObject powerUpPrefab;
     public float spawnInterval = 15f;
 
-    private float timer = 0f;
+    private float timer = 3;
     private List<PowerUpCrate> activePowerUps = new List<PowerUpCrate>();
 
     void Update()
@@ -41,7 +41,6 @@ public class PowerUpManager : MonoBehaviour
             Vector3 pos = new Vector3(Random.Range(-5f, 5f), Random.Range(-3f, 3f), 0f);
             GameObject obj = Instantiate(powerUpPrefab, pos, Quaternion.identity);
             PowerUpCrate crate = obj.GetComponent<PowerUpCrate>();
-            crate.lifetime = Random.Range(2f, 4f);
             activePowerUps.Add(crate);
         }
 

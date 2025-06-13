@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PowerUp
   - Bloon
+  - BloonKiller
   layers:
   - Default
   - TransparentFX

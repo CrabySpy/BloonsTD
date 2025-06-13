@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class Bloon : MonoBehaviour {
+public class Bloon : MonoBehaviour
+{
     public float speed = 1f;
     public Transform[] path;
     public GameObject weakerBloonPrefab;
@@ -10,7 +11,8 @@ public class Bloon : MonoBehaviour {
 
     public float Progress { get; private set; }
 
-    void Update() {
+    void Update()
+    {
         Move();
     }
 
@@ -23,7 +25,6 @@ public class Bloon : MonoBehaviour {
 
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
 
-        // Update progress based on distance moved
         float distanceMoved = Vector2.Distance(prevPos, transform.position);
         Progress += distanceMoved;
 
@@ -32,26 +33,32 @@ public class Bloon : MonoBehaviour {
             waypointIndex++;
         }
 
-        // Clamp Z
         transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
     }
 
-    void ReachEnd()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        ShopScript shop = FindFirstObjectByType<ShopScript>();
-        if (shop != null) {
-            shop.LivesVar -= 20;
-        }
+        if (other.CompareTag("BloonKiller"))
+        {
+            ShopScript shop = FindFirstObjectByType<ShopScript>();
+            if (shop != null)
+            {
+                shop.LivesVar -= 1;
+                shop.UpdateText();
+            }
 
-        Destroy(gameObject);
+            Destroy(gameObject);
+        }
     }
 
-    public void TakeDamage(int damage) {
+    public void TakeDamage(int damage)
+    {
         if (!isClone) return;
 
         Health -= damage;
 
-        if (Health <= 0) {
+        if (Health <= 0)
+        {
             Pop();
         }
     }
@@ -69,7 +76,8 @@ public class Bloon : MonoBehaviour {
             GameObject newBloon = Instantiate(weakerBloonPrefab, transform.position, Quaternion.identity);
             Bloon newBloonScript = newBloon.GetComponent<Bloon>();
 
-            if (newBloonScript != null) {
+            if (newBloonScript != null)
+            {
                 newBloonScript.SetPath(path, waypointIndex);
                 newBloonScript.speed = speed;
                 newBloonScript.isClone = true;
@@ -77,11 +85,13 @@ public class Bloon : MonoBehaviour {
         }
 
         AudioSource audio = GetComponent<AudioSource>();
-        if (audio != null && audio.clip != null) {
+        if (audio != null && audio.clip != null)
+        {
             audio.Play();
             Destroy(gameObject, audio.clip.length);
         }
-        else {
+        else
+        {
             Destroy(gameObject);
         }
     }
