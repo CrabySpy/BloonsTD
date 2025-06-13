@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 86211300}
   m_Layer: 7
   m_Name: BlueBloon
-  m_TagString: Untagged
+  m_TagString: Bloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5432,7 +5432,7 @@ GameObject:
   - component: {fileID: 861859249}
   m_Layer: 7
   m_Name: GreenBloon
-  m_TagString: Untagged
+  m_TagString: Bloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5964,7 +5964,7 @@ GameObject:
   - component: {fileID: 896501117}
   m_Layer: 7
   m_Name: RedBloon
-  m_TagString: Untagged
+  m_TagString: Bloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6540,7 +6540,7 @@ GameObject:
   - component: {fileID: 980623369}
   m_Layer: 7
   m_Name: YellowBloon
-  m_TagString: Untagged
+  m_TagString: Bloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
