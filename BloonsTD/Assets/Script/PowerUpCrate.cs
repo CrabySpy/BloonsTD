@@ -5,7 +5,7 @@ public class PowerUpCrate : MonoBehaviour
     public int moneyReward = 100;
     public float lifetime = 0.25f;
 
-    void Start()
+    public void InitializeLifetime()
     {
         Destroy(gameObject, lifetime);
     }

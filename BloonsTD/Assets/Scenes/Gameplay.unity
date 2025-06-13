@@ -8260,7 +8260,7 @@ GameObject:
   m_Layer: 0
   m_Name: crate
   m_TagString: PowerUp
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -8378,9 +8378,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 76152317
+  m_SortingLayer: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: -5381221794071337182, guid: f5c80999b28626349b7f0b924b605bc4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8401,8 +8401,8 @@ Transform:
   m_GameObject: {fileID: 1226688275}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.5635, y: 2.5309, z: 0}
-  m_LocalScale: {x: 0.438308, y: 0.39027008, z: 1}
+  m_LocalPosition: {x: -48.6894, y: 11.6892, z: 0}
+  m_LocalScale: {x: 0.38041753, y: 0.3408007, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

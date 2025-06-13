@@ -6,7 +6,7 @@ public class PowerUpManager : MonoBehaviour
     public GameObject powerUpPrefab;
     public float spawnInterval = 15f;
 
-    private float timer = 3;
+    private float timer = 0f;
     private List<PowerUpCrate> activePowerUps = new List<PowerUpCrate>();
 
     void Update()
@@ -28,32 +28,41 @@ public class PowerUpManager : MonoBehaviour
 
 
     void SpawnCrates()
+{
+    foreach (var crate in activePowerUps)
     {
-        if (powerUpPrefab == null)
-        {
-            Debug.LogError("powerUpPrefab is not assigned in the Inspector.");
-            return;
-        }
-
-        int count = 1;
-        for (int i = 0; i < count; i++)
-        {
-            Vector3 pos = new Vector3(Random.Range(-5f, 5f), Random.Range(-3f, 3f), 0f);
-            GameObject obj = Instantiate(powerUpPrefab, pos, Quaternion.identity);
-            PowerUpCrate crate = obj.GetComponent<PowerUpCrate>();
-            activePowerUps.Add(crate);
-        }
-
-        CleanUpDestroyedCrates();  // <-- kills the crates after searching em
-
-        SelectionSortPowerUps();
-
-        PowerUpCrate best = FindBestPowerUp();
-        if (best != null)
-        {
-            Debug.Log("coordinates: " + best.transform.position);
-        }
+        if (crate != null)
+            Destroy(crate.gameObject);
     }
+    activePowerUps.Clear();
+
+    if (powerUpPrefab == null)
+    {
+        Debug.LogError("powerUpPrefab is not assigned in the Inspector.");
+        return;
+    }
+
+    int count = 1;
+    for (int i = 0; i < count; i++)
+    {
+        Vector3 pos = new Vector3(Random.Range(-5f, 5f), Random.Range(-3f, 3f), 0f);
+        GameObject obj = Instantiate(powerUpPrefab, pos, Quaternion.identity);
+        PowerUpCrate crate = obj.GetComponent<PowerUpCrate>();
+        crate.lifetime = Random.Range(2f, 4f);
+        crate.InitializeLifetime();
+        activePowerUps.Add(crate);
+    }
+
+
+    SelectionSortPowerUps();
+
+    PowerUpCrate best = FindBestPowerUp();
+    if (best != null)
+    {
+        Debug.Log("coordinates: " + best.transform.position);
+    }
+}
+
 
     void CleanUpDestroyedCrates()
     {
