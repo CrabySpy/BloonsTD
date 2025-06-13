@@ -84,7 +84,7 @@ public class ShopScript : MonoBehaviour
         UpdateRoundText();
 
 
-        Positions = new Vector2[5];
+        Positions = new Vector2[5]; //storing icon positions into array
         Positions[0] = new Vector2(3.08f, 1.171395f);
         Positions[1] = new Vector2(3.715f, 1.178f);
         Positions[2] = new Vector2(4.4f, 1.19f);
@@ -92,7 +92,7 @@ public class ShopScript : MonoBehaviour
         Positions[4] = new Vector2(5.78f, 1.17f);
 
         //Stack overflow 87-95
-        towerIconMap = new System.Collections.Generic.Dictionary<TowerInfo, GameObject>()
+        towerIconMap = new System.Collections.Generic.Dictionary<TowerInfo, GameObject>() //maps info from array to icon
         {
             { TowerInfo[0], DartMonkeyIcon },
             { TowerInfo[1], BombTowerIcon },
@@ -101,8 +101,8 @@ public class ShopScript : MonoBehaviour
             { TowerInfo[4], IceMonkeyIcon }
         };
 
-        currentSortedTowers = SortSearchMethods.BubbleSortCost(TowerInfo);
-        UpdatePositions(currentSortedTowers);
+        currentSortedTowers = SortSearchMethods.BubbleSortCost(TowerInfo); //sends in towerinfo to the bubble sort and returns array
+        UpdatePositions(currentSortedTowers); //updates positions so icons update to right place
 
         if (startRoundButton != null)
         {
@@ -122,7 +122,7 @@ public class ShopScript : MonoBehaviour
         Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
 
-        //Lines 104-135 chatgpt was used
+        //Lines 1126-156 chatgpt was used, uses iconmap to change colliders to the right place
         BoxCollider2D hitCollider = Physics2D.OverlapPoint(worldPoint) as BoxCollider2D;
 
         if (hitCollider != null)
@@ -155,7 +155,7 @@ public class ShopScript : MonoBehaviour
             InfoBox.SetActive(false);
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)) //click condition
         {
             if (sortButtonCollider == Physics2D.OverlapPoint(worldPoint) && sortButtonActive == false)
             {
@@ -238,12 +238,12 @@ public class ShopScript : MonoBehaviour
         Desc.text = SelectedTower.Description;
     }
 
-    void UpdatePositions(TowerInfo[] sortedTowers)
+    void UpdatePositions(TowerInfo[] sortedTowers) //updates icon to right location
     {
         for (int i = 0; i < sortedTowers.Length; i++)
         {
             Vector2 targetPos = Positions[i];
-            //Stack overflow 
+            //Stack overflow line 247
             if (towerIconMap.TryGetValue(sortedTowers[i], out GameObject icon))
             {
                 icon.transform.localPosition = targetPos;
@@ -251,7 +251,7 @@ public class ShopScript : MonoBehaviour
         }
     }
 
-    void ReverseOrder()
+    void ReverseOrder() // reverses order of sorted array
     {
         TowerInfo[] reverse = new TowerInfo[currentSortedTowers.Length];
         for (int i = 0; i < currentSortedTowers.Length; i++)
@@ -306,8 +306,4 @@ public class ShopScript : MonoBehaviour
 
 }
 
-//b tower 900
-//dart 250
-//ice 850
-//super 4000
-//tack 400
+

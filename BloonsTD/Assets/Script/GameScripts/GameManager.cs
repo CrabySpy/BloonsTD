@@ -26,6 +26,12 @@ public class GameManager : MonoBehaviour
     public GameObject pretabBomb;
     public GameObject pretabSuper;
 
+    //Stat menu stat placeholders
+    public int HighestWave = 27;
+    public int TotalWavesPlayed = 56;
+    public int TotalTowersPlaced = 180;
+    public int TotalBalloonsPopped = 783;
+
 
 
     public GameObject upgradeMenuPanel;

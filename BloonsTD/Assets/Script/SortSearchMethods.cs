@@ -4,7 +4,7 @@ using System.Linq;
 
 public class SortSearchMethods
 {
-    //Bubble Sort
+    //Bubble Sort for cost, returns towerinfo array
     public static TowerInfo[] BubbleSortCost(TowerInfo[] nums)
     {
         for (int n = 0; n < nums.Length; n++)
@@ -23,6 +23,7 @@ public class SortSearchMethods
         return nums;
     }
 
+    //same bubblesort but for range
     public static TowerInfo[] BubbleSortRange(TowerInfo[] nums)
     {
         for (int n = 0; n < nums.Length; n++)
