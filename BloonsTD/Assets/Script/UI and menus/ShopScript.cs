@@ -63,7 +63,7 @@ public class ShopScript : MonoBehaviour
     private BoxCollider2D startRoundButtonCollider;
     public int Rounds = 0;
     public int MoneyVar = 650;
-
+    public int LivesVar = 100;
     void Start()
     {
         SortSearchMethods = new SortSearchMethods();
